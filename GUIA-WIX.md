@@ -1,285 +1,327 @@
-# Guia: montando o site da Tabaque no Wix (passo a passo)
+# Guia: montando o site da Tabaqu3 no Wix (passo a passo)
 
-**Meta:** loja no ar e vendendo a Coleção Halloween **até 20/10**, para ter 10 dias de venda antes do dia 31.
+**Meta:** loja no ar em **tabaqu3.com.br** vendendo a Coleção Halloween **até 20/10**, para ter uns 10 dias de venda antes do dia 31.
 
 **O que tem nesta pasta:**
 
 | Arquivo | Para que serve |
 |---|---|
-| `prototipo/index.html` | O desenho da Home. Abra no navegador e use como referência visual para montar no Wix (e para mostrar ao Gabriel) |
-| `prototipo/colecoes-especiais.html` | O desenho da página Coleções Especiais (collab com o João) |
+| `prototipo/index.html` | Desenho da **Home**. Abra no navegador e use como molde para montar no Wix |
+| `prototipo/colecoes-especiais.html` | Página **Coleções Especiais** (collab com o João Morais) |
+| `prototipo/personalize.html` | Página **Personalize** (formulário + pagamento) |
+| `prototipo/parcerias.html` | Página **Parcerias** (tabacarias, estúdios e artistas) |
+| `prototipo/sobre.html` | Página **Sobre** (a história do nome e da marca) |
 | `conteudo/textos-do-site.md` | Todos os textos prontos para copiar e colar |
+| `briefing/briefing-gabriel.md` | As respostas do Gabriel (fonte de tudo) |
 | `assets/produtos/*.jpg` | Fotos já recortadas para os produtos da loja |
 | `assets/fotos/*.jpg` | Fotos originais convertidas de HEIC para JPG |
-| `assets/grafismos/drip-mini.svg` | O risquinho "escorrendo" que vai acima dos títulos (detalhe pequeno) |
-| `assets/grafismos/drip-laranja.svg` | Versão larga da borda escorrendo. Opcional; use com moderação |
-| `embeds/contagem-regressiva.html` | O contador até o Halloween, para colar no Wix |
+| `assets/grafismos/drip-mini.svg` | Risquinho "escorrendo", detalhe opcional |
+| `embeds/contagem-regressiva.html` | Contador até o Halloween (opcional) |
 
-> **Uma verdade importante sobre o Wix:** ele não importa um site pronto em código. A gente **remonta** o design dentro do editor, usando o protótipo como molde. Isso é bom: depois o Gabriel consegue mudar preço, foto e estoque sozinho, sem mexer em código.
+> **Sobre o Wix:** ele não importa um site pronto em código. A gente **remonta** o design dentro do editor, usando o protótipo como molde. A vantagem: depois o Gabriel muda preço, foto e estoque sozinho, pelo app do Wix no celular.
+
+> **Para abrir o protótipo sem a pergunta de +18 toda hora:** adicione `?sem18` no fim do endereço (ex.: `index.html?sem18`).
 
 ---
 
-## Cronograma sugerido (hoje: 07/10)
+## ⚠️ Antes de tudo: o orçamento
+
+O Gabriel disse **até R$ 60/mês**. O Wix cobra em dólar, e o plano mais barato que **vende com carrinho e pagamento online** (hoje chamado **Core**) fica em torno de **US$ 29/mês no plano anual**, o que dá **bem mais que R$ 60** com o câmbio e os impostos. Os planos mais baratos (Light) não têm loja com checkout.
+
+Opções para levar ao Gabriel:
+1. **Aumentar o orçamento e ir de Core anual** (recomendado): loja completa, Pix e cartão, frete automático e domínio grátis no 1º ano. É o que o briefing pede ("automatizar frete, envio e pagamentos").
+2. **Ficar no limite de R$ 60:** o Wix não atende. As alternativas seriam plataformas com plano grátis e taxa por venda (ex.: Nuvemshop grátis), mas aí sai do Wix, que foi o pedido do cliente.
+
+**Confira o preço do dia em wix.com/plans** antes de passar o número pra ele. Dá para montar tudo no plano grátis e só pagar na hora de publicar.
+
+---
+
+## Cronograma sugerido
 
 | Quando | O quê |
 |---|---|
-| 07 a 09/10 | Gabriel responde o briefing (bot). Criar a conta e o site, montar o Tema |
-| 09 a 13/10 | Montar Home + página Halloween + cadastrar produtos. Pedir ao João o material da collab |
-| 13 a 15/10 | Pagamentos, frete, políticas, domínio. Fotos novas, se tiver |
-| 16 a 17/10 | Celular, SEO, compra-teste de verdade |
-| **18 a 20/10** | **Publicar** e anunciar no Instagram |
-| 18 a 24/10 | Página **Coleções Especiais** com a collab do João (se o material chegar antes, entra já no lançamento) |
-| Depois | Linha Gatinho, página de personalizados |
+| 10 a 11/10 | Gabriel decide o plano. Pedir a logo T3, as fotos do celular e o material do João. Criar o site e montar o Tema |
+| 11 a 14/10 | Montar Home + cadastrar os produtos do Halloween + porta +18 |
+| 14 a 16/10 | Pagamentos, frete (BH + Brasil), "Leve 2", políticas, domínio tabaqu3.com.br |
+| 16 a 18/10 | Páginas Personalize, Sobre e Parcerias. Celular, SEO, compra-teste |
+| **18 a 20/10** | **Publicar** e anunciar no @tabaqu3_ |
+| 20 a 25/10 | Coleções Especiais (collab João Morais), quando o material chegar |
 
 ---
 
 ## PASSO 1: Criar o site (15 min)
 
-1. Entre em **wix.com** e faça login (de preferência com um e-mail da Tabaque, não o seu pessoal; depois você entra como colaboradora).
-2. **Criar novo site** → tipo **Loja online** → quando perguntar, escolha **começar do zero / template em branco** (template de loja em branco). A gente não quer brigar com o design de um template pronto.
-3. Editor: use o **Wix Editor** (o normal). O Wix Studio é mais poderoso, mas leva mais tempo para aprender e o prazo é curto.
-4. Se o Wix perguntar sobre apps, garanta que o **Wix Stores (Loja)** está instalado. Ele cria sozinho as páginas: *Loja*, *Página do produto*, *Carrinho* e *Obrigado*.
-
-> **Dica:** se você já tiver a conta da Tabaque no Wix, vá em *Configurações → Funções e permissões* e peça para o Gabriel te convidar como **Administradora**. Assim o site e o pagamento ficam no nome dele, e você edita.
+1. Entre em **wix.com**. O ideal é a conta ficar **no e-mail do Gabriel** e ele te convidar como **Administradora** (*Configurações → Funções e permissões*). Assim o pagamento e o dinheiro ficam no nome dele.
+2. **Criar novo site** → **Loja online** → comece por um **template de loja em branco**.
+3. Use o **Wix Editor** (o normal). O Wix Studio é mais complexo e o prazo é curto.
+4. Garanta que o app **Wix Stores (Loja)** está instalado. Ele cria sozinho as páginas *Loja*, *Página do produto*, *Carrinho* e *Obrigado*.
 
 ---
 
-## PASSO 2: Montar o Tema (cores e fontes) (20 min)
+## PASSO 2: Tema: cores e fontes (20 min)
 
-Fazer isso **antes** de qualquer página. Tudo que você colocar depois já sai com a cara da Tabaque.
-
-No editor: **Design do site** (ícone de pincel no menu da esquerda) → **Cores do site** → *Personalizar*:
+Faça **antes** de qualquer página. No editor: **Design do site** (pincel) → **Cores do site**:
 
 | Uso | Cor | Hex |
 |---|---|---|
 | Fundo principal | Branco | `#FFFFFF` |
-| Fundo de seções alternadas, cards | Gelo | `#F6F4F1` |
-| Linhas e bordas finas | Linha | `#E6E2DC` |
+| Seções alternadas | Gelo | `#F5F4F2` |
+| Linhas finas | | `#E5E2DD` |
 | Títulos e textos | Preto | `#111111` |
-| Texto secundário | Cinza | `#6B6862` |
-| **Destaque**: botão principal, selos, ponto final dos títulos | Laranja (a cor do filamento) | `#FF7A21` |
-| Laranja para texto pequeno em fundo branco (as "tags") | Laranja escuro | `#C9560C` |
+| Texto secundário | Cinza | `#66635E` |
+| **Halloween**, botão de compra | Laranja | `#FF6A13` |
+| **Personalize** | Azul | `#2F5BFF` |
+| **Collabs / Coleções Especiais** | Verde | `#13A86B` |
+| **Parcerias** | Amarelo | `#FFC61A` |
+| **Promoções e avisos** ("Leve 2") | Vermelho | `#EE3124` |
 
-> **A regra do site:** o fundo é sempre branco ou gelo. Laranja e preto só aparecem como **destaque**: o botão principal, os selos, o ponto laranja no fim do título ("DERRETEU**.**"), a faixa de aviso no topo e **um único bloco preto** na Home (o da collab com o João). Se uma seção inteira ficar laranja ou preta, está pesado demais.
+> **A regra do site:** o fundo é sempre **branco ou gelo**. As cores de grafite do Gabriel (laranja, azul, verde, amarelo, vermelho) entram só como **destaque**, e **cada área tem a sua cor**. Assim o site fica clean, mas colorido e com cara de grafite.
 >
-> As fotos de produto já têm fundo claro (mesa branca), então combinam naturalmente com o site branco.
+> O "grafite" aparece nos **adesivos**: etiquetas coloridas, pequenas e levemente tortas, como sticker colado em parede. Nada de letra de pichação (o Gabriel quer "underground clean").
 
-**Design do site → Temas de texto:**
+**Temas de texto:**
 
-| Estilo | Fonte | Observação |
-|---|---|---|
-| Título 1 e 2 | **Anton** | sempre MAIÚSCULAS |
-| Título 3 (a "tag" de grafite) | **Permanent Marker** | frases curtas em minúsculas, levemente inclinadas |
-| Parágrafos | **Inter** (ou *Helvetica/Arial*, se não achar) | |
+| Estilo | Fonte |
+|---|---|
+| Título 1 e 2 | **Anton**, sempre MAIÚSCULAS |
+| Parágrafos, menu, botões | **Inter** (ou Helvetica/Arial) |
 
-Se Anton ou Permanent Marker não aparecerem na lista: no seletor de fontes clique em **Fontes → Fazer upload de fontes** e suba os arquivos `.ttf`. Os dois são gratuitos no **fonts.google.com** (procure o nome → *Get font* → *Download*).
+Se Anton não aparecer: no seletor de fontes → **Fazer upload de fontes** → suba o `.ttf` baixado grátis em fonts.google.com.
 
-**Botões** (crie 2 estilos em *Design do site → Botões*):
-- **Principal:** formato pílula (cantos totalmente arredondados), fundo laranja `#FF7A21`, texto preto em negrito e maiúsculo. Ao passar o mouse: fundo preto, texto branco. Use **um por seção**, no máximo.
-- **Secundário:** pílula, fundo transparente, borda preta de 2px, texto preto. Ao passar o mouse: fundo preto. É o botão dos cards de produto e o "Ver a loja".
-- Sem sombra.
+**Botões** (*Design do site → Botões*), todos em formato pílula, texto maiúsculo em negrito:
+- **Principal:** fundo preto, texto branco. Ao passar o mouse, fica laranja.
+- **Compra (Halloween):** fundo laranja `#FF6A13`, texto preto.
+- **Secundário:** transparente, borda preta de 2 px.
 
----
-
-## PASSO 3: Cabeçalho e rodapé (30 min)
-
-Eles aparecem em todas as páginas, então monte uma vez só.
-
-**Cabeçalho** (veja o topo do protótipo):
-1. Uma **faixa preta fina** (uns 32 px) no topo com o texto da faixa de aviso (em `textos-do-site.md`), texto branco pequeno e a palavra "Halloween:" em laranja.
-2. Abaixo, fundo **branco** com uma linha fina `#E6E2DC` embaixo: **logo** à esquerda (por enquanto o nome "Tabaque" em Permanent Marker; troque pela logo oficial quando o Gabriel mandar o PNG/SVG).
-3. **Menu**: *Adicionar → Menu*. Itens: Halloween · Loja · **Coleções Especiais** · Personalizado · Sobre · Dúvidas. Deixe só o item "Coleções Especiais" com o texto em laranja escuro `#C9560C`, para chamar atenção (no Wix: clique no menu → *Design* → personalize o item, ou use um texto com link no lugar desse item).
-4. **Ícone do carrinho**: *Adicionar → Loja → Ícone do carrinho*.
-5. Clique no cabeçalho → **Rolagem → Fixo** (ele fica grudado no topo).
-
-**Rodapé**: 4 colunas igual ao protótipo (logo + frase / Loja / Ajuda / Siga) e embaixo a linha com CNPJ e "Produto para maiores de 18 anos".
-
-**Botão do WhatsApp flutuante:** *Adicionar → Botão → ícone* (ou procure "WhatsApp" no App Market); link: `https://wa.me/55DDDNUMERO`. Clique com o botão direito → **Fixar na tela** → canto inferior direito.
+**Como fazer um "adesivo" no Wix:** *Adicionar → Texto* → escreva em maiúsculas, Inter extra-negrito, tamanho 11–12, espaçamento entre letras alto → *Design do texto → Cor de fundo* (ou coloque uma *Forma → retângulo* atrás) → gire **-2°**. Depois de pronto, **clique com o botão direito → Salvar em "Meus elementos"**, para reaproveitar nas outras cores.
 
 ---
 
-## PASSO 4: Cadastrar os produtos (o coração da loja) (40 min)
+## PASSO 3: Cabeçalho, rodapé e porta +18 (45 min)
 
-No **Painel de controle** (fora do editor): **Catálogo → Produtos da loja → + Novo produto → Produto físico**.
+Montados uma vez, aparecem no site inteiro.
 
-Para a **Abóbora Derretida**, recomendo **1 produto com 2 opções** (o cliente escolhe o tamanho na mesma página):
+**Faixa de aviso** (topo, preta, 32 px): texto em `textos-do-site.md`.
 
-1. **Imagens**: suba `abobora-grande.jpg`, `abobora-mini.jpg` e `abobora-dupla-quadrada.jpg`.
-2. **Nome**: Abóbora Derretida
-3. **Descrição**: cole de `textos-do-site.md`.
-4. **Faixa (ribbon)**: `Edição limitada`
-5. **Preço**: coloque o preço do tamanho mais barato.
-6. **Opções do produto → + Adicionar opção**: nome `Tamanho`, valores `BIC Grande (Maxi)` e `BIC Mini`. Mostre como **lista suspensa** ou **botões**.
-7. Ative **Gerenciar preço e estoque das variantes**: aí você põe um preço e uma **quantidade** diferente para cada tamanho.
-8. **Estoque**: ative **Rastrear estoque** e coloque o número de peças da edição limitada. Quando zerar, o site mostra "Esgotado" sozinho, e isso cria escassez real.
-9. **Informações de envio**: **peso** (ex.: 0,05 kg, mas pese uma peça embalada). Sem peso, o frete calculado não funciona.
-10. **Categoria / Coleção**: crie a categoria **Halloween** e marque. (Crie também **Gatinho** e **Collab João**, mesmo vazias. A categoria **Collab João** é a que vai alimentar a página Coleções Especiais.)
-11. **Seções de informações extras**: adicione "Envio" e "Trocas" com os textos do arquivo.
-12. **SEO** (fim da página do produto): título e descrição de `textos-do-site.md`.
+**Cabeçalho** (branco, linha fina embaixo, **Rolagem → Fixo**):
+1. **Logo T3** à esquerda + "TABAQU3" em Anton. ⚠️ O SVG atual é conversão automática do PNG, então pode vir com borda serrilhada. Se ficar feio, use o **PNG em alta** por enquanto e anote que precisa redesenhar o vetor.
+2. **Menu:** Halloween (em laranja) · Loja · Coleções Especiais · Personalize · Parcerias · Sobre.
+3. **Ícone do carrinho:** *Adicionar → Loja → Ícone do carrinho*.
 
-Depois cadastre o **Combo Família Derretida** como outro produto, com faixa `Combo` e **Preço promocional** (o Wix mostra o preço cheio riscado).
+**Rodapé** (fundo gelo): 4 colunas (logo + frase / Loja / Ajuda / Tabaqu3). Embaixo: razão social, **CNPJ**, endereço/BH, e "Site e produtos destinados a maiores de 18 anos". ⚖️ Razão social, CNPJ, endereço e contato são **obrigatórios** em loja online (Decreto 7.962/2013).
 
-> **Ainda não tem a peça pronta?** Em *Estoque*, ative **Pré-venda** (se aparecer na sua conta). O cliente paga agora e você avisa o prazo de envio.
+**WhatsApp flutuante:** botão com ícone, link `https://wa.me/5531XXXXXXXXX` → botão direito → **Fixar na tela** → canto inferior direito.
 
-> **Personalizado:** se o Gabriel quiser vender personalização direto pelo site, crie um produto "Case Personalizado" e ative **Campo de texto personalizado** (ex.: "Que nome ou texto você quer no case?"). Por enquanto o protótipo manda para o WhatsApp, que é mais simples para orçamento.
+**Porta +18** (o briefing pede comunicação restrita a +18):
+1. *Adicionar → Interativo → **Lightbox*** → layout em branco.
+2. Conteúdo: logo T3, "VOCÊ TEM 18 ANOS OU MAIS?", texto curto, botão **"Sim, tenho 18+"** (configure para **fechar a lightbox**) e botão **"Não"** (link para google.com).
+3. *Configurações da lightbox → Exibir automaticamente*: **sim**, em **todas as páginas**, ao carregar.
+4. Desative **fechar ao clicar fora** e o **X**, para a pessoa ter que responder.
+
+> O Wix não tem um "lembrar que já respondeu" nativo na lightbox. Se for chato aparecer em toda página, configure para aparecer **só na Home** e na página Halloween (que são as portas de entrada do Instagram).
 
 ---
 
-## PASSO 5: Montar as páginas no editor (2 a 4 h)
+## PASSO 4: Cadastrar os produtos (40 min)
 
-Abra `prototipo/index.html` ao lado do Wix e vá recriando **seção por seção**. No Wix: *Adicionar → Seção → Seção em branco*. Uma seção do Wix = um bloco do protótipo.
+**Painel → Catálogo → Produtos da loja → + Novo produto → Produto físico.**
 
-### Home (de cima pra baixo)
-1. **Hero** (fundo branco): texto "coleção halloween 2026" (Título 3, laranja escuro), "DERRETEU." (Título 1, bem grande, **preto**, só o ponto final em laranja: selecione o ponto e mude a cor), parágrafo em cinza, botão principal + botão secundário. À direita, a foto `abobora-grande.jpg` com cantos levemente arredondados (6 px), **sem borda e sem girar**. Selo "edição limitada": retângulo laranja pequeno, levemente inclinado, com o texto em Permanent Marker.
-2. **Contador**: *Adicionar → Embed → Incorporar HTML* (pode aparecer como "Código HTML" / "Embed a widget"). Clique em **Inserir código**, cole tudo de `embeds/contagem-regressiva.html` e ajuste a caixa para mais ou menos 380 × 70 px. Coloque uma linha fina acima dele.
-3. **Produtos Halloween** (fundo gelo `#F6F4F1`): um **risquinho escorrendo** pequeno acima do título (suba `assets/grafismos/drip-mini.svg` em *Adicionar → Imagem → Fazer upload*; o Wix aceita SVG), título "Abóbora Derretida" + texto + *Adicionar → Loja → Galeria de produtos* (ou "Grade"). Nas configurações da galeria escolha **Categoria: Halloween**. Em **Design**: card sem borda, foto com cantos de 6 px, nome em Inter negrito, preço preto, botão "Adicionar ao carrinho" no estilo **secundário** (contornado).
-4. **Por que Tabaque?** (fundo branco): título + 4 colunas (*Adicionar → Layout → Colunas / Repetidor*). Só os números "01, 02..." em laranja.
-5. **Coleções Especiais: destaque** (fundo branco, com uma **caixa preta** de cantos arredondados no meio): à esquerda "coleções especiais" (tag laranja), "TABAQUE × JOÃO" (branco, com o × laranja), texto curto e um botão contornado branco "Conhecer a collab", com link para a página **Coleções Especiais**. À direita, a foto da collab. **É o único bloco preto da Home**, e é isso que faz ele chamar atenção.
-6. **Coleções** (fundo branco): 3 fotos com título embaixo (Halloween / Gatinho / Pássaros × João), cada uma com **link** para a categoria (a terceira vai para a página Coleções Especiais).
-7. **Faz o seu.** (fundo branco): caixa com borda tracejada laranja + botão principal do WhatsApp (link em `textos-do-site.md`).
-8. **Sobre** (fundo gelo `#F6F4F1`): foto + texto.
-9. **Dúvidas** (fundo branco): *Adicionar → Listas/Interativo → Acordeão* (ou o app **Wix FAQ**) com as perguntas do arquivo.
-10. **Rodapé** em fundo gelo, com textos pretos e cinza.
+### Abóbora Derretida (Halloween)
+1. **Imagens:** `abobora-grande.jpg`, `abobora-mini.jpg`, `abobora-dupla-quadrada.jpg` (+ as fotos novas do Gabriel).
+2. **Nome:** Abóbora Derretida. **Descrição:** em `textos-do-site.md`.
+3. **Faixa (ribbon):** `Edição limitada`.
+4. **Preço:** **R$ 54,90**.
+5. **Opções do produto → Tamanho:** `BIC mini` e `BIC normal` (mostrar como botões).
+6. **Estoque:** ative **Rastrear estoque**. O Gabriel produz sob demanda, mas a edição é de **50 peças**: distribua entre os tamanhos (ex.: 25 + 25; confirmar com ele). Quando zerar, aparece "Esgotado" sozinho.
+7. **Peso:** pese uma capa embalada (ex.: 0,05 kg). Sem peso, o frete calculado não funciona.
+8. **Categoria:** crie **Halloween** e marque.
+9. **Infos extras:** seções "Material", "Prazo" e "Trocas" (textos no arquivo).
+10. **SEO** do produto: no arquivo de textos.
 
-### Página "Halloween" (landing do lançamento)
-*Páginas → + Adicionar página*. Pode **duplicar a Home** e deixar só: Hero + contador + produtos + "por que" + FAQ. É essa página que vai no link da bio do Instagram e nos anúncios.
+> Se preferir que a Home mostre **dois cards** (mini e normal) como no protótipo, cadastre **dois produtos** iguais, um para cada tamanho, com 25 de estoque cada. Fica mais visual, e o "Leve 2" funciona igual.
 
-### Página "Coleções Especiais" (collab com o João)
-Referência: `prototipo/colecoes-especiais.html`. *Páginas → + Adicionar página → Em branco*, nome **Coleções Especiais** (o endereço fica `/colecoes-especiais`). Textos prontos em `textos-do-site.md`.
-1. **Topo** (branco, tudo centralizado): tag "coleções especiais", título "TABAQUE × JOÃO" (× em laranja), texto de apresentação, e "coleção pássaros".
-2. **A coleção** (fundo gelo): *Galeria de produtos* filtrada pela categoria **Collab João**. Faixa (ribbon) dos produtos: `Collab`.
-3. **O artista** (branco): foto do João à esquerda; à direita bio, uma frase dele em destaque (Permanent Marker, com uma barrinha laranja à esquerda) e o link para o Instagram dele.
-4. **Do papel pro 3D** (fundo gelo): 3 colunas: o desenho → a modelagem → a impressão. Se tiver fotos do processo (esboço, tela do 3D, impressora), coloque aqui. Isso valoriza muito a collab.
-5. **Próximas collabs** (branco): *Adicionar → Formulário → Inscrição/Newsletter* (Wix Forms) com o campo de e-mail. Os contatos caem em **Painel → Contatos**, e dá para avisar todo mundo quando sair a próxima collab.
+### Capa Personalizada
+- **Preço:** R$ 59,90 · **Categoria:** Personalizada · **Faixa:** `Sob encomenda`
+- **Opções:** Tamanho (BIC mini / BIC normal) e **Cor** (Laranja / Lilás / Cinza / Azul; use o tipo **cor** com amostras).
+- **Campo de texto personalizado** (ativar): "Nome usado no formulário de personalização".
+- **Estoque:** não rastrear (é sob demanda).
 
-> Quando vier a próxima collab, é só duplicar as seções 1 a 4 nessa mesma página (a mais nova em cima) e criar uma categoria nova na loja. A aba vira o "arquivo" de todas as collabs da Tabaque.
+### Collab João Morais
+- Um produto por desenho, categoria **Collab João Morais**, faixa `Collab`. Preço **a definir**.
 
-### Página "Loja"
-Já foi criada pelo Wix Stores. Em *Configurações da galeria*, ative o **filtro por categoria** (Halloween / Gatinho / Collab João) e aplique o mesmo design dos cards.
-
-### Página do produto, Carrinho e Checkout
-Clique na página do produto → **Configurações / Design** → ajuste fontes e cores para o tema (fundo branco, botão "Adicionar ao carrinho" laranja). No carrinho, ative **campo de cupom** e **nota para o vendedor**.
-
-### Sobre e Dúvidas
-Páginas simples com o texto completo, quando o briefing chegar.
+### Categorias para criar agora
+Halloween · Personalizada · Collab João Morais · Designs Originais (vazia, para o futuro, a R$ 44,90).
 
 ---
 
-## PASSO 6: Versão para celular (1 h, NÃO PULE)
+## PASSO 5: "Leve 2 e ganhe 10% na segunda" (10 min)
 
-A maioria da venda vai vir pelo Instagram, ou seja, pelo celular.
-No topo do editor clique no **ícone de celular**. O Wix reorganiza tudo, mas sempre bagunça um pouco:
-- Use o protótipo aberto no celular como referência: tudo em **uma coluna**, foto do hero **abaixo** do texto, e na caixa preta da collab a foto vai **embaixo** do texto.
-- "DERRETEU." precisa caber numa linha (diminua a fonte só no celular).
-- Botões com largura cheia.
-- Esconda no celular o que não couber (clique → *ícone de olho → Ocultar*), em vez de espremer.
+**Painel → Marketing → Descontos automáticos** (ou *Loja → Promoções*; o nome muda) → **Criar desconto**:
+- Tipo: **Compre X, ganhe Y**.
+- **Compre:** 1 item da categoria **Halloween** · **Ganhe:** 1 item da categoria **Halloween** com **10% de desconto**.
+- Validade: até 31/10 (ou até acabar).
 
----
-
-## PASSO 7: Plano Premium (obrigatório para vender)
-
-O plano grátis **não** vende: não tem checkout, mostra anúncio do Wix e o endereço fica `usuario.wixsite.com/tabaque`.
-- Vá em **Fazer upgrade** e escolha um plano de **e-commerce** (hoje se chama **Core** ou superior; os nomes mudam). Compare na página de planos qual libera "Aceitar pagamentos online".
-- O **plano anual** costuma ser bem mais barato que o mensal e normalmente vem com **1 ano de domínio grátis**.
-- Os preços são em dólar e convertidos; confira o valor do dia em **wix.com/plans** antes de passar para o Gabriel.
+O desconto entra sozinho no carrinho. Conta: 2 capas = R$ 54,90 + R$ 49,41 = **R$ 104,31**.
 
 ---
 
-## PASSO 8: Pagamentos (Pix + cartão)
+## PASSO 6: Montar as páginas (3 a 5 h)
 
-**Painel → Configurações → Aceitar pagamentos.** No Brasil as opções hoje são:
+Abra o protótipo ao lado do Wix e recrie **seção por seção** (*Adicionar → Seção → Em branco*). Textos em `textos-do-site.md`.
 
-| Opção | Pix | Cartão parcelado | Observação |
+### Home (`index.html`)
+1. **Hero** (branco): adesivo laranja "Coleção Halloween 2026", "DERRETEU." em preto com o **ponto laranja**, texto, botão de compra laranja + botão secundário "Fazer a minha do zero" → Personalize. Abaixo, "Edição limitada: 50 peças". À direita, a foto com 2 adesivos ("só 50 peças" e "R$ 54,90").
+   - Opcional: no lugar da barrinha, cole o **contador** de `embeds/contagem-regressiva.html` (*Adicionar → Embed → Incorporar HTML*).
+2. **Abóbora Derretida** (fundo gelo): título, texto, **faixa "Leve 2"** (caixa com borda preta + adesivo vermelho) e *Adicionar → Loja → **Galeria de produtos*** filtrada pela categoria **Halloween**. Design do card: sem borda, foto com cantos de 6 px, nome em Inter negrito, botão contornado.
+3. **Por que Tabaqu3** (branco): 4 colunas, cada uma com uma **bolinha** de cor (ABS / Design original / Feita pra você / Encaixe BIC).
+4. **Collab** (bloco **preto**, o único escuro da Home): adesivo verde, "TABAQU3 × JOÃO MORAIS", texto, botão → Coleções Especiais. Foto da collab à direita.
+5. **Loja** (gelo): 3 fotos com bolinha de cor e título (Halloween / Collab João Morais / Personalizada), cada uma com link. Linha "Em breve: designs originais a partir de R$ 44,90".
+6. **Personalize + Parcerias** (branco): duas caixas lado a lado, uma com **borda azul** (cores de filamento + R$ 59,90) e outra com **borda e fundo amarelo-claro**.
+7. **Sobre** (gelo): foto, "TABAQU3 = TABACARIA + 3", texto e os 3 adesivos **Expressiva / Artística / Não usual**.
+8. **Dúvidas** (branco): *Adicionar → Interativo → Acordeão* (ou app **Wix FAQ**).
+
+### Personalize (`personalize.html`)
+O fluxo: **formulário com as referências → pagamento no carrinho**.
+1. Topo (branco, centralizado), "Como funciona" em 4 passos (números em azul).
+2. **Caixa de aviso azul** com as regras: o que não é aceito, o reembolso se a ideia for recusada e os **7 dias do CDC**.
+3. *Adicionar → Formulário → **Wix Forms*** com os campos: Nome · WhatsApp · E-mail · Tamanho (opções) · Cor (opções) · Descrição (texto longo) · **Upload de arquivo** (referências) · Caixa de aceite das políticas.
+4. Em *Configurações do formulário → Após o envio* → **Redirecionar para** o produto **Capa Personalizada**. O cliente escolhe tamanho e cor, escreve o nome e paga.
+5. O Gabriel recebe o formulário em **Painel → Formulários** e o pedido em **Painel → Pedidos**, e casa os dois pelo nome. Se recusar a ideia: **Pedidos → Reembolsar**.
+
+> Alternativa mais simples: o Wix Forms tem **campo de pagamento** (cobra os R$ 59,90 no próprio formulário). O lado ruim é que aí o frete não é calculado. Só vale se a personalizada for entregue em mãos em BH.
+
+### Coleções Especiais (`colecoes-especiais.html`)
+Topo "TABAQU3 × JOÃO MORAIS" (× verde) → **Galeria de produtos** da categoria Collab João Morais → bloco do artista (foto, história, frase, link **@joaomorais.tattoo**) → "Como a capa nasce" em 3 passos → chamada "É artista ou tatuador?" → Parcerias. Na próxima collab, duplique os blocos.
+
+### Parcerias (`parcerias.html`)
+Duas caixas: **Tabacarias e estúdios** (amarelo) e **Artistas e tatuadores** (verde), e depois um **Wix Forms** de contato (Nome, WhatsApp, "Você é" com opções, Loja/estúdio, Cidade, Instagram, Mensagem).
+
+### Sobre (`sobre.html`)
+História do nome, origem ("chega de genérico"), os 3 adesivos e "Quem está por trás" com a foto do Gabriel.
+
+### Página do produto, Carrinho, Loja
+Ajuste para o tema: fundo branco, botão "Adicionar ao carrinho" laranja. Na Loja, ative o **filtro por categoria**. No carrinho, ative o **campo de cupom** (os parceiros vão usar).
+
+---
+
+## PASSO 7: Parcerias com tabacarias: QR code + 10% (20 min por parceiro)
+
+O briefing: unidades expostas + QR code + **10% de comissão** nas vendas vindas daquela tabacaria. Jeito simples de controlar no Wix:
+
+1. **Um cupom por parceiro:** *Marketing → Cupons → Novo cupom*, ex.: `CHARUTARIA5` com **5% de desconto** para o cliente (o desconto é o que faz o cliente digitar o código; sem isso ninguém usa).
+2. **QR code:** gere grátis (ex.: no próprio Wix, *Marketing → QR code*, se aparecer; ou em qualquer gerador) apontando para `https://tabaqu3.com.br/halloween`. Imprima um display com o QR **e o cupom escrito em grande**.
+3. **Fechamento mensal:** *Pedidos* → filtre/busque pelo cupom → some o valor dos produtos → **10%** é a comissão.
+
+> Se o volume crescer, dá para trocar por um app de afiliados do App Market, que calcula a comissão sozinho.
+
+---
+
+## PASSO 8: Versão para celular (1 h, NÃO PULE)
+
+As vendas vão vir do Instagram, ou seja, do celular. No editor, clique no **ícone de celular**:
+- Tudo em **uma coluna**. Foto do hero **abaixo** do texto. Botões em largura cheia.
+- "DERRETEU." numa linha só (diminua a fonte só no celular).
+- Caixas Personalize e Parcerias, uma embaixo da outra.
+- Teste a **lightbox +18** no celular.
+
+---
+
+## PASSO 9: Plano Premium
+
+*Fazer upgrade* → plano com **loja/pagamentos** (Core ou superior). O **anual** é bem mais barato e dá 1 ano de domínio grátis. Veja o aviso de orçamento lá no início.
+
+---
+
+## PASSO 10: Pagamentos (Pix + cartão)
+
+Hoje o Gabriel só recebe por Pix. **Painel → Configurações → Aceitar pagamentos**:
+
+| Opção | Pix | Cartão | Observação |
 |---|---|---|---|
-| **Wix Pagamentos** | ✅ | ✅ | Nativo, mais fácil, tudo no painel do Wix. **Recomendado** |
-| **Mercado Pago** | ✅ | ✅ | Bom se o Gabriel já usa Mercado Pago. Taxa a partir de ~3,99% |
-| **PagBank (PagSeguro)** | ✅ | ✅ | Pix e carteira a ~0,99% |
-| PayPal | ❌ | ✅ | Complemento opcional |
+| **Wix Pagamentos** | ✅ | ✅ | Nativo, mais fácil. **Recomendado** |
+| Mercado Pago | ✅ | ✅ | Se ele já tiver conta |
+| PagBank | ✅ | ✅ | Taxas de Pix baixas |
 
-- Só dá para ter **um** provedor de cartão, mas você pode somar outros métodos.
-- Quem preenche os dados bancários e CPF/CNPJ é o **Gabriel** (a conta tem que estar no nome dele).
-- **Desconto no Pix:** a forma mais simples é um cupom (*Marketing → Cupons*, ex.: `PIX5`) ou deixar claro no texto. O Wix não dá desconto automático por forma de pagamento sem app extra.
+Quem preenche CPF/CNPJ e conta bancária é o **Gabriel**.
 
 ---
 
-## PASSO 9: Frete
+## PASSO 11: Frete e entrega (BH + Brasil)
 
 **Painel → Configurações → Envio e entrega**:
-
-1. Crie a **região Brasil**.
-2. Escolha uma das opções:
-   - **Mais rápido para lançar:** **frete fixo** (ex.: R$ 15 para o Brasil todo) + **frete grátis acima de R$ X** (ótimo para empurrar o Combo).
-   - **Mais certo:** instale o app **Melhor Envio** (*App Market → "Melhor Envio"*). Ele calcula Correios/transportadoras no checkout com o CEP do cliente e gera as etiquetas mais baratas. Não tem mensalidade, só paga a etiqueta. Por isso o **peso** do Passo 4 importa.
-3. Se o Gabriel entrega em mãos na cidade dele: ative **Retirada local** e/ou **Entrega local** (motoboy) com taxa fixa.
+1. **Região "Belo Horizonte"**: ative **Entrega local** (taxa fixa, ex.: R$ 10, ou grátis) e/ou **Retirada** (combinar pelo WhatsApp). Hoje ele já entrega em mãos em BH, então isso mantém o que funciona.
+2. **Região "Brasil"**: instale o app **Melhor Envio** (App Market). Ele calcula Correios e transportadoras pelo CEP e gera etiqueta barata, sem mensalidade. Por isso o **peso** do Passo 4 é importante.
+3. **Prazo de manuseio:** 2 dias úteis (o tempo de produção).
 
 ---
 
-## PASSO 10: Políticas, aviso +18 e dados obrigatórios
+## PASSO 12: Políticas
 
-- **Políticas** (trocas, envio, privacidade): *Configurações → Políticas* (ou nas configurações da loja). Use a base de `textos-do-site.md`. O Wix mostra os links no checkout.
-- **Rodapé com razão social, CNPJ, endereço e contato:** é exigência legal para loja online no Brasil (Decreto 7.962/2013).
-- **Aviso +18:** o case é acessório, mas a marca conversa com tabacaria. Recomendo pelo menos a frase no rodapé. Se o Gabriel quiser uma porta de entrada: *Adicionar → Interativo → Lightbox* com "Você tem 18 anos ou mais? [Sim] [Não]" aparecendo ao abrir o site. Atenção: atrapalha um pouco a conversão, então decida com ele.
-
----
-
-## PASSO 11: Domínio
-
-**Configurações → Domínios**:
-- **Ainda não tem domínio:** use o domínio grátis do plano anual ou compre ali mesmo. Para `.com.br`, o mais comum é registrar no **registro.br** (~R$ 40/ano) no CPF/CNPJ do Gabriel e depois conectar.
-- **Já tem (ex.: no registro.br):** *Conectar um domínio que você já tem* → o Wix mostra os **servidores DNS** (nameservers). No registro.br: *Domínio → Alterar servidores DNS* → cole os do Wix. Leva de algumas horas até 48 h para propagar, então **faça isso até o dia 15/10**.
+*Configurações → Políticas* (base em `textos-do-site.md`):
+- **Trocas:** 7 dias de arrependimento (CDC art. 49), inclusive na personalizada (compra online); defeito em até 30 dias.
+- **Personalização:** o que não é aceito e reembolso integral se a ideia for recusada.
+- **Envio** e **Privacidade (LGPD)**.
 
 ---
 
-## PASSO 12: SEO e compartilhamento
+## PASSO 13: Domínio tabaqu3.com.br
 
-- **Painel → Marketing e SEO → Ferramentas de SEO**: siga o checklist (conecta ao Google).
-- Em cada página: *Menu de páginas → ⋯ → Configurações de SEO*: título e descrição de `textos-do-site.md`.
-- **Imagem de compartilhamento** (a que aparece quando mandam o link no WhatsApp): *Configurações da página → Redes sociais* → use uma foto da abóbora.
-- **Favicon** (iconezinho da aba): *Configurações → Favicon*, com a logo em quadrado.
+**Configurações → Domínios → Conectar um domínio que você já tem** → digite `tabaqu3.com.br` → o Wix mostra os **servidores DNS**. No **registro.br** (login do Gabriel): *Domínio → Alterar servidores DNS* → cole os do Wix. Leva até 48 h para propagar, então **faça até 15/10**.
 
 ---
 
-## PASSO 13: Testar ANTES de anunciar
+## PASSO 14: SEO e redes
 
-1. Clique em **Visualizar**, desktop e celular. Clique em **todos** os botões e links.
-2. Faça uma **compra real** de verdade (pode ser você ou o Gabriel) com **Pix** e com **cartão**, com um CEP de outro estado. Confira:
-   - o frete calculou certo?
-   - chegou o e-mail de confirmação para o cliente e para a loja?
-   - o pedido apareceu em **Painel → Pedidos**?
-   - o estoque baixou?
-3. Cancele/reembolse o pedido de teste pelo painel.
-4. Abra o site no celular de outra pessoa, de preferência pelo link no Instagram.
-
-Tudo certo → **Publicar** (canto superior direito).
+- *Marketing e SEO → Ferramentas de SEO*: siga o checklist.
+- SEO de cada página: em `textos-do-site.md`.
+- **Imagem de compartilhamento** (aparece no WhatsApp): foto da abóbora.
+- **Favicon:** a logo T3.
+- Link na bio do **@tabaqu3_**: `tabaqu3.com.br`. Peça ao João para colocar o link da página da collab na bio dele também.
 
 ---
 
-## PASSO 14: Entregar para o Gabriel (o dia a dia dele)
+## PASSO 15: Testar e publicar
 
-Mostre só isto para ele, no **app Wix** do celular (é onde ele vai viver):
-- **Pedidos**: ver pedido novo, marcar como "enviado" e colar o código de rastreio (o cliente recebe e-mail automático).
-- **Produtos**: mudar preço, foto e estoque, e ocultar produto esgotado.
-- **Cupons**: criar cupom para influenciador/parceiro.
-- **Notificações**: ativar o alerta de "novo pedido" no celular.
+1. **Visualizar** no desktop e no celular, clicando em tudo.
+2. **Compra real** com Pix e cartão, comprando **2 capas** (para testar o "Leve 2"): uma entrega em BH e um CEP de outro estado. Confira frete, e-mails, pedido no painel e baixa de estoque.
+3. Teste o **formulário de personalização** com upload e o redirecionamento.
+4. Teste um **cupom de parceiro**.
+5. Reembolse os testes → **Publicar**.
 
 ---
 
-## O que ainda falta do briefing (precisa do Gabriel)
+## PASSO 16: Entregar para o Gabriel
 
-- [ ] Logo em PNG/SVG (fundo transparente)
-- [ ] Preços: Grande, Mini, Combo; desconto no Pix?
-- [ ] Quantas peças de cada (edição limitada)
-- [ ] Material (PLA/PETG), se vem com isqueiro, prazo de produção
-- [ ] Fotos da linha Gatinho
-- [ ] Collab com o João: fotos dos modelos, nomes e preços, @ do Instagram, mini bio, uma frase dele, como a collab surgiu, fotos do processo (esboço → 3D → impressão) e uma foto do João
-- [ ] História da marca e do nome
-- [ ] CNPJ/razão social, endereço, e-mail, WhatsApp, @ do Instagram
-- [ ] Domínio (já tem?)
-- [ ] Cidade de envio / se faz entrega local
-- [ ] Decisão sobre o aviso +18
+No **app Wix** do celular dele:
+- **Pedidos:** marcar como enviado + código de rastreio; reembolsar uma personalizada recusada.
+- **Formulários:** ver os pedidos de personalização e de parceria.
+- **Produtos:** preço, foto e estoque.
+- **Cupons:** criar o cupom de cada nova tabacaria parceira.
+- **Notificações:** alerta de pedido novo.
 
-## Dica de foto (pra ficar MUITO melhor)
-Com o site branco, as fotos atuais (mesa branca) já combinam bem. Para ficar ainda mais profissional, vale uma sessão rápida com o celular mesmo:
-- **Fotos de loja (cards):** produto em fundo **branco ou bege bem claro**, luz de janela, sem planta nem móvel aparecendo. Todas no mesmo enquadramento (vertical 4:5), para a grade ficar alinhada.
-- **Fotos de clima (hero, coleções, redes):** aqui entra a rua: **muro pichado**, mão segurando o isqueiro, foto à noite com a lanterna do celular de lado. Elas trazem a vibe de grafite sem pesar o site.
-- **Collab do João:** foto dele no estúdio + o desenho original em papel ao lado do case pronto.
+---
+
+## Pendências
+
+**Precisa do Gabriel agora:**
+- [ ] Decidir o plano do Wix (o orçamento de R$ 60/mês não cobre loja)
+- [ ] Arquivos **t3-logo.png** e **t3-logo.svg** (não chegaram para mim)
+- [ ] Fotos de produto que estão no celular dele
+- [ ] **Vídeo de referência** `screenrecording-2026-09-16_16-13-55.mp4` (não chegou)
+- [ ] Divisão das 50 peças entre BIC mini e BIC normal
+- [ ] CNPJ/razão social, endereço comercial, e-mail, número do WhatsApp
+- [ ] Lista do que **não** é aceito na personalização (políticas da marca)
+- [ ] Foto e 2 linhas sobre ele para a página Sobre
+- [ ] Condições da parceria com tabacarias: as unidades são consignadas? Tem custo?
+
+**Precisa do João Morais:**
+- [ ] Fotos e nomes dos modelos, preço de cada um
+- [ ] Mini bio (estúdio, cidade, estilo), uma frase sobre a collab e uma foto dele
+
+**A definir (futuro):** cenário das fotos novas, referências visuais, outros modelos de isqueiro, designs originais a R$ 44,90. Gatinho e Pássaros **saíram do site** (ainda não existem).
+
+## Dica de foto
+O Gabriel quer "underground clean": rua, mas sem sujeira. Sugestões:
+- **Fotos de loja:** fundo branco ou cinza bem claro, luz de janela, mesmo enquadramento vertical em todas.
+- **Fotos de clima:** **mão** (a dele ou a da amiga) segurando o isqueiro na frente de um **muro com grafite colorido desfocado** atrás. O colorido do grafite conversa com a paleta do site sem precisar de pichação.
+- **Collab:** o João no estúdio com as capas, e o desenho em papel ao lado da capa pronta.

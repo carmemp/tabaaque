@@ -3,98 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tabaque | Cases 3D para isqueiro</title>
-<meta name="description" content="Cases para isqueiro feitos em impressão 3D. Coleção Halloween: edição limitada.">
+<title>Tabaqu3 | Capas 3D para isqueiro</title>
+<meta name="description" content="Capas para isqueiro BIC impressas em 3D, com design original. Coleção Halloween: edição limitada de 50 peças.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
-
-<div class="nota">Protótipo: referência para montar no Wix</div>
-
-<!-- FAIXA DE AVISO (Wix: tira fina no topo do Cabeçalho) -->
-<div class="aviso"><b>🎃 Halloween:</b> edição limitada · Frete para todo o Brasil · Pix com desconto</div>
-
-<!-- CABEÇALHO -->
-<header>
-  <div class="wrap nav">
-    <a href="index.html" class="logo">Taba<b>que</b></a>
-    <ul class="menu">
-      <li><a href="#halloween">Halloween</a></li>
-      <li><a href="#colecoes">Loja</a></li>
-      <li class="especial"><a href="colecoes-especiais.html">Coleções Especiais</a></li>
-      <li><a href="#perso">Personalizado</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#faq">Dúvidas</a></li>
-    </ul>
-    <a href="#halloween" class="carrinho">Carrinho <i>0</i></a>
-    <button class="hamb" aria-label="Menu">☰</button>
-  </div>
-</header>
+<body data-pagina="home">
 
 <!-- HERO / LANÇAMENTO HALLOWEEN -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="tag">coleção halloween 2026</span>
-      <h1>Derreteu<span class="laranja">.</span></h1>
-      <p class="lead">A abóbora mais mal-encarada da rua agora veste o seu isqueiro. Impressa em 3D, em tiragem limitada.</p>
+      <span class="adesivo">Coleção Halloween 2026</span>
+      <h1>Derreteu<span class="c-laranja">.</span></h1>
+      <p class="lead">Uma abóbora em forma de vela, derretendo devagar. Elegante de longe, inquietante de perto. Para BIC mini e BIC normal.</p>
       <div class="hero-ctas">
-        <a class="btn" href="#halloween">Garantir a minha</a>
-        <a class="btn ghost" href="#colecoes">Ver a loja</a>
+        <a class="btn laranja" href="#halloween">Garantir a minha</a>
+        <a class="btn ghost" href="personalize.html">Fazer a minha do zero</a>
       </div>
-      <div class="contagem" id="contagem" aria-label="Contagem regressiva para o Halloween">
-        <span class="rot">Acaba em</span>
-        <div><b data-d>00</b><small>dias</small></div>
-        <div><b data-h>00</b><small>horas</small></div>
-        <div><b data-m>00</b><small>min</small></div>
-        <div><b data-s>00</b><small>seg</small></div>
+      <div class="estoque">
+        <b>Edição limitada: 50 peças</b>
+        <div class="barra"><i></i></div>
+        <small>Quando acabar, não volta. [no Wix: "Restam X" vem do estoque]</small>
       </div>
     </div>
     <div class="hero-foto">
-      <span class="selo">edição limitada</span>
-      <img src="../assets/produtos/abobora-grande.jpg" alt="Case Abóbora Derretida laranja em um isqueiro BIC grande">
+      <span class="adesivo">só 50 peças</span>
+      <span class="adesivo preto b">R$ 54,90</span>
+      <img src="../assets/produtos/abobora-grande.jpg" alt="Capa Abóbora Derretida laranja em um isqueiro BIC normal">
     </div>
   </div>
 </section>
 
-<!-- PRODUTOS HALLOWEEN (Wix Stores: "Galeria de produtos" filtrada pela categoria Halloween) -->
+<!-- PRODUTOS HALLOWEEN (Wix Stores: Galeria de produtos, categoria Halloween) -->
 <section class="alt" id="halloween">
   <div class="wrap">
     <div class="cabeca">
       <div>
-        <svg class="drip-mini" viewBox="0 0 120 22" aria-hidden="true"><path fill="currentColor" d="M0 0h120v6c-6 0-7 6-12 6s-5-4-10-4-6 12-11 12-4-10-9-10-6 5-11 5-5-8-11-8-5 14-10 14-5-12-10-12-5 6-10 6-6-4-11-4-5 7-10 7S1 6 0 6Z"/></svg>
+        <span class="adesivo">Halloween</span>
         <h2>Abóbora Derretida</h2>
-        <p class="sub">Dois tamanhos, o mesmo mau humor. Encaixe justo no BIC, furinho pra cordão ou chaveiro e acabamento escorrendo de verdade.</p>
+        <p class="sub">Impressa em ABS, que aguenta calor, chama e sol. Encaixe justo no BIC, furinho na base pra cordão ou chaveiro. Vai só a capa, sem isqueiro.</p>
       </div>
     </div>
-    <div class="cards">
+    <div class="promo">
+      <span class="adesivo vermelho">Leve 2</span>
+      <p>Leve 2 e ganhe 10% de desconto na segunda. <span>Desconto aplicado sozinho no carrinho.</span></p>
+    </div>
+    <div class="cards dois">
       <a class="card" href="#">
-        <div class="img"><span class="faixa lar">Edição limitada</span><img src="../assets/produtos/abobora-grande.jpg" alt="Abóbora Derretida para BIC grande"></div>
+        <div class="img"><span class="faixa laranja">Edição limitada</span><img src="../assets/produtos/abobora-grande.jpg" alt="Abóbora Derretida para BIC normal"></div>
         <div class="info">
-          <h3>Abóbora Derretida: Grande</h3>
-          <span class="compat">Para isqueiro BIC grande (Maxi)</span>
-          <span class="preco">R$ XX,XX</span>
+          <h3>Abóbora Derretida: BIC normal</h3>
+          <span class="compat">Para isqueiro BIC tamanho normal</span>
+          <span class="preco">R$ 54,90</span>
           <span class="btn">Adicionar ao carrinho</span>
         </div>
       </a>
       <a class="card" href="#">
-        <div class="img"><span class="faixa lar">Edição limitada</span><img src="../assets/produtos/abobora-mini.jpg" alt="Abóbora Derretida para BIC mini"></div>
+        <div class="img"><span class="faixa laranja">Edição limitada</span><img src="../assets/produtos/abobora-mini.jpg" alt="Abóbora Derretida para BIC mini"></div>
         <div class="info">
-          <h3>Abóbora Derretida: Mini</h3>
+          <h3>Abóbora Derretida: BIC mini</h3>
           <span class="compat">Para isqueiro BIC mini</span>
-          <span class="preco">R$ XX,XX</span>
-          <span class="btn">Adicionar ao carrinho</span>
-        </div>
-      </a>
-      <a class="card" href="#">
-        <div class="img"><span class="faixa">Combo</span><img src="../assets/produtos/abobora-dupla-quadrada.jpg" alt="As duas versões da Abóbora Derretida lado a lado"></div>
-        <div class="info">
-          <h3>Combo Família Derretida</h3>
-          <span class="compat">Grande + Mini</span>
-          <span class="preco">R$ XX,XX <s>R$ XX,XX</s></span>
+          <span class="preco">R$ 54,90</span>
           <span class="btn">Adicionar ao carrinho</span>
         </div>
       </a>
@@ -102,75 +74,94 @@
   </div>
 </section>
 
-<!-- POR QUE TABAQUE -->
+<!-- POR QUE TABAQU3 -->
 <section>
   <div class="wrap">
-    <div class="cabeca"><div><span class="tag">por que tabaque?</span><h2>Isqueiro também tem estilo<span class="laranja">.</span></h2></div></div>
+    <div class="cabeca"><div><span class="adesivo preto">Por que Tabaqu3</span><h2>Personalidade pra um objeto que ninguém repara<span class="c-laranja">.</span></h2></div></div>
     <div class="porque-grid">
-      <div class="item"><span class="num">01</span><h3>Impresso em 3D</h3><p>Cada peça sai da impressora aqui no ateliê, camada por camada.</p></div>
-      <div class="item"><span class="num">02</span><h3>Encaixe justo</h3><p>Modelado na medida do BIC: entra firme, não sai sozinho e não atrapalha na hora de acender.</p></div>
-      <div class="item"><span class="num">03</span><h3>Arte autoral</h3><p>Desenhos próprios e collabs com artistas da rua. Nada de estampa genérica.</p></div>
-      <div class="item"><span class="num">04</span><h3>Sob encomenda</h3><p>Quer seu nome, sua tag ou seu desenho? A gente transforma em case.</p></div>
+      <div class="item"><div class="bolinha" style="background:var(--laranja)"></div><h3>Aguenta o tranco</h3><p>Impressa em ABS: resiste ao calor, à chama e ao sol. Não deforma no bolso nem no painel do carro.</p></div>
+      <div class="item"><div class="bolinha" style="background:var(--verde)"></div><h3>Design original</h3><p>Nada de modelo baixado da internet. Cada capa é desenhada aqui ou em collab com artistas.</p></div>
+      <div class="item"><div class="bolinha" style="background:var(--azul)"></div><h3>Feita pra você</h3><p>Produzida sob demanda em cerca de 2 dias. E se quiser, a gente cria a sua do zero.</p></div>
+      <div class="item"><div class="bolinha" style="background:var(--amarelo)"></div><h3>Encaixe BIC</h3><p>Modelada na medida do BIC mini e do BIC normal: entra firme e não atrapalha na hora de acender.</p></div>
     </div>
   </div>
 </section>
 
-<!-- COLEÇÕES ESPECIAIS (destaque da collab) -->
-<section class="especial-home">
+<!-- COLLAB (único bloco escuro da Home) -->
+<section style="padding-top:0">
   <div class="wrap">
     <div class="especial-box">
       <div class="txt">
-        <span class="tag">coleções especiais</span>
-        <h2>Tabaque <span class="laranja">×</span> João</h2>
-        <p>A primeira collab da Tabaque: os traços do tatuador João viraram cases em 3D. Tiragem pequena, assinada pelo artista.</p>
-        <a class="btn ghost" href="colecoes-especiais.html">Conhecer a collab</a>
+        <span class="adesivo verde">Coleções especiais</span>
+        <h2>Tabaqu3 <span class="c-verde">×</span> João Morais</h2>
+        <p>Os desenhos do tatuador João Morais viraram capas em 3D. A parceria nasceu numa sessão de tatuagem e hoje as peças ficam expostas no estúdio dele.</p>
+        <a class="btn" href="colecoes-especiais.html">Conhecer a collab</a>
       </div>
-      <div class="arte"><div class="ph"><div><em>voa</em>foto da collab com o João</div></div></div>
+      <div class="arte"><div class="ph"><div><em>T3 × JM</em>foto da collab com o João</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- COLEÇÕES (Wix: 3 caixas com imagem + link para Categoria da loja) -->
-<section id="colecoes">
+<!-- LOJA / COLEÇÕES -->
+<section class="alt" id="colecoes">
   <div class="wrap">
-    <div class="cabeca"><h2>Coleções</h2><a class="link-seta" href="#">Ver tudo →</a></div>
+    <div class="cabeca"><div><h2>Loja</h2><p class="sub">Em breve: designs originais Tabaqu3 a partir de R$ 44,90.</p></div><a class="link-seta" href="#">Ver tudo →</a></div>
     <div class="col-grid">
       <a class="col" href="#halloween">
         <div class="foto"><img src="../assets/fotos/IMG_2190.jpg" alt="Coleção Halloween"></div>
-        <h3>Halloween</h3><small>Edição limitada</small>
-      </a>
-      <a class="col" href="#">
-        <div class="foto"><div class="ph"><div><em>miau</em>foto da linha Gatinho</div></div></div>
-        <h3>Gatinho</h3><small>Fofura com atitude</small>
+        <div class="rot"><i style="background:var(--laranja)"></i><h3>Halloween</h3></div><small>Edição limitada · R$ 54,90</small>
       </a>
       <a class="col" href="colecoes-especiais.html">
-        <div class="foto"><div class="ph"><div><em>voa</em>foto da collab</div></div></div>
-        <h3>Pássaros <span class="laranja">×</span> João</h3><small>Coleção especial</small>
+        <div class="foto"><div class="ph"><div><em>T3 × JM</em>foto da collab</div></div></div>
+        <div class="rot"><i style="background:var(--verde)"></i><h3>Collab João Morais</h3></div><small>Coleção especial</small>
+      </a>
+      <a class="col" href="personalize.html">
+        <div class="foto"><div class="ph"><div><em>sua ideia</em>foto de capas em laranja, lilás, cinza e azul</div></div></div>
+        <div class="rot"><i style="background:var(--azul)"></i><h3>Personalizada</h3></div><small>Do seu jeito · R$ 59,90</small>
       </a>
     </div>
   </div>
 </section>
 
-<!-- PERSONALIZADO -->
-<section id="perso" style="padding-top:0">
-  <div class="wrap perso-box">
-    <div>
-      <h2>Faz o seu<span class="laranja">.</span></h2>
-      <p class="sub">Nome, tag, logo da sua tabacaria ou aquele desenho que só você entende. Manda a ideia no WhatsApp que a gente te passa prazo e valor.</p>
+<!-- PERSONALIZE + PARCERIAS -->
+<section>
+  <div class="wrap duo">
+    <div class="duo-box azul">
+      <span class="adesivo azul">Personalize</span>
+      <h2>Faz a sua<span class="c-azul">.</span></h2>
+      <p>Manda sua ideia, suas referências e escolhe a cor. O Gabriel avalia e transforma em capa 3D.</p>
+      <div class="cores">
+        <span class="cor"><i style="background:var(--laranja)"></i>Laranja</span>
+        <span class="cor"><i style="background:var(--lilas)"></i>Lilás</span>
+        <span class="cor"><i style="background:var(--cinza-fil)"></i>Cinza</span>
+        <span class="cor"><i style="background:var(--azul)"></i>Azul</span>
+      </div>
+      <p style="margin:10px 0 18px"><span class="preco-grande">R$ 59,90</span></p>
+      <a class="btn azul" href="personalize.html">Criar a minha</a>
     </div>
-    <a class="btn" href="#">Pedir orçamento no WhatsApp</a>
+    <div class="duo-box amarelo">
+      <span class="adesivo amarelo">Parcerias</span>
+      <h2>Tem tabacaria ou estúdio?</h2>
+      <p>Exponha as capas Tabaqu3 no seu balcão com um QR code exclusivo e ganhe 10% de comissão em cada venda que vier por ele. Artista? Bora fazer uma collab.</p>
+      <a class="btn" href="parcerias.html">Quero ser parceiro</a>
+    </div>
   </div>
 </section>
 
-<!-- SOBRE -->
-<section class="alt sobre" id="sobre">
+<!-- SOBRE (resumo) -->
+<section class="alt sobre">
   <div class="wrap sobre-grid">
-    <img src="../assets/fotos/IMG_2188.jpg" alt="Os dois cases de abóbora sobre uma mesa branca">
+    <img src="../assets/fotos/IMG_2188.jpg" alt="As duas capas de abóbora sobre uma mesa branca">
     <div>
-      <span class="tag">a rua no seu bolso</span>
-      <h2>Sobre a Tabaque</h2>
-      <p>A Tabaque nasceu da vontade de transformar um objeto que todo mundo carrega, e ninguém repara, em peça de expressão. A gente bebe do grafite, da pichação e da cultura de rua pra criar cases que têm cara, nome e história.</p>
-      <p><em>[Texto final depende do briefing do Gabriel: origem do nome, como começou, quem está por trás.]</em></p>
+      <span class="adesivo preto">Tabacaria + 3D</span>
+      <h2>Tabaqu3 = tabacaria + 3</h2>
+      <p>O mercado de itens de tabacaria impressos em 3D estava cheio de peça genérica, baixada da internet. A Tabaqu3 nasceu pra fazer o contrário: dar identidade de verdade a um objeto que todo mundo carrega e ninguém repara.</p>
+      <div class="palavras">
+        <span class="adesivo">Expressiva</span>
+        <span class="adesivo azul">Artística</span>
+        <span class="adesivo verde">Não usual</span>
+      </div>
+      <p><a class="link-seta" href="sobre.html">Ler a história →</a></p>
     </div>
   </div>
 </section>
@@ -180,49 +171,18 @@
   <div class="wrap">
     <div class="cabeca"><h2>Dúvidas</h2></div>
     <div class="faq-lista">
-      <details><summary>O isqueiro vem junto?</summary><p>[A definir] O case é vendido sem isqueiro. Ele é feito para BIC grande (Maxi) ou BIC mini; confira o tamanho antes de comprar.</p></details>
-      <details><summary>Serve em outros isqueiros?</summary><p>Os modelos são desenhados para os isqueiros BIC. Em outras marcas o encaixe pode não ficar firme.</p></details>
-      <details><summary>Qual o prazo de envio?</summary><p>[A definir] Peças em estoque saem em até X dias úteis. Personalizados levam de X a X dias para produção.</p></details>
-      <details><summary>Como funciona a personalização?</summary><p>Você manda a ideia pelo WhatsApp, a gente faz um orçamento e mostra uma prévia antes de imprimir.</p></details>
-      <details><summary>Quais as formas de pagamento?</summary><p>Pix e cartão de crédito (com parcelamento), direto no site.</p></details>
-      <details><summary>Posso trocar ou devolver?</summary><p>Sim: você tem 7 dias após o recebimento para desistir da compra, conforme o Código de Defesa do Consumidor. Veja a Política de Trocas.</p></details>
-      <details><summary>Vocês vendem no atacado?</summary><p>[A definir] Tabacarias e headshops podem chamar no WhatsApp para condições de revenda.</p></details>
+      <details><summary>O isqueiro vem junto?</summary><p>Não. Vai só a capa. Ela serve no isqueiro BIC mini ou BIC normal, conforme o modelo que você escolher.</p></details>
+      <details><summary>Serve em outros isqueiros?</summary><p>Por enquanto, só BIC mini e BIC normal. Outros modelos estão nos planos.</p></details>
+      <details><summary>A capa aguenta calor?</summary><p>Sim. Ela é impressa em ABS, um plástico resistente a calor, chama e sol.</p></details>
+      <details><summary>Qual o prazo?</summary><p>Cada capa é produzida sob demanda em cerca de 2 dias. Depois disso, o prazo de entrega depende do frete escolhido. Em Belo Horizonte dá para combinar a entrega.</p></details>
+      <details><summary>Como funciona o "Leve 2"?</summary><p>Colocou duas capas da coleção Halloween no carrinho, a segunda sai com 10% de desconto automaticamente.</p></details>
+      <details><summary>Como funciona a personalizada?</summary><p>Você preenche o formulário com sua ideia, referências e cor, e paga R$ 59,90. O Gabriel avalia a ideia; se ela for contra as políticas da marca, você recebe o valor de volta.</p></details>
+      <details><summary>Quais as formas de pagamento?</summary><p>Pix e cartão de crédito, direto no site.</p></details>
+      <details><summary>Posso devolver?</summary><p>Sim. Você tem 7 dias a partir do recebimento para desistir da compra, conforme o Código de Defesa do Consumidor. Veja a Política de Trocas.</p></details>
     </div>
   </div>
 </section>
 
-<!-- RODAPÉ -->
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <a href="index.html" class="logo">Taba<b>que</b></a>
-        <p style="color:var(--cinza);margin-top:14px;max-width:32ch">Cases para isqueiro feitos em impressão 3D. Arte de rua no seu bolso.</p>
-      </div>
-      <div><h4>Loja</h4><ul><li><a href="#halloween">Halloween</a></li><li><a href="#">Gatinho</a></li><li><a href="colecoes-especiais.html">Coleções Especiais</a></li><li><a href="#perso">Personalizado</a></li></ul></div>
-      <div><h4>Ajuda</h4><ul><li><a href="#faq">Dúvidas</a></li><li><a href="#">Trocas e devoluções</a></li><li><a href="#">Envio</a></li><li><a href="#">Privacidade</a></li></ul></div>
-      <div><h4>Siga</h4><ul><li><a href="#">Instagram @tabaque</a></li><li><a href="#">TikTok</a></li><li><a href="#">WhatsApp</a></li></ul></div>
-    </div>
-    <div class="legal"><span>© 2026 Tabaque · CNPJ 00.000.000/0000-00</span><span>Produto para maiores de 18 anos.</span></div>
-  </div>
-</footer>
-
-<a class="zap" href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
-
-<script>
-  // Contagem até 31/10 23:59 (horário de Brasília). No Wix: use o embed em /embeds/contagem-regressiva.html
-  (function(){
-    var alvo=new Date('2026-10-31T23:59:59-03:00').getTime(), el=document.getElementById('contagem');
-    function p(n){return String(n).padStart(2,'0')}
-    function tick(){
-      var r=Math.max(0,alvo-Date.now());
-      el.querySelector('[data-d]').textContent=p(Math.floor(r/864e5));
-      el.querySelector('[data-h]').textContent=p(Math.floor(r/36e5)%24);
-      el.querySelector('[data-m]').textContent=p(Math.floor(r/6e4)%60);
-      el.querySelector('[data-s]').textContent=p(Math.floor(r/1e3)%60);
-    }
-    tick(); setInterval(tick,1000);
-  })();
-</script>
+<script src="partes.js"></script>
 </body>
 </html>

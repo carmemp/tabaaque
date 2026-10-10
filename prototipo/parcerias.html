@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parcerias | Tabaqu3</title>
+<meta name="description" content="Seja parceiro Tabaqu3: tabacarias e estúdios ganham 10% de comissão; artistas e tatuadores fazem collabs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body data-pagina="parc">
+
+<section class="topo">
+  <div class="wrap">
+    <span class="adesivo amarelo">Parcerias</span>
+    <h1>Bora junto<span style="color:var(--amarelo)">.</span></h1>
+    <p class="sub">A Tabaqu3 cresce com quem já está na cena: tabacarias, estúdios de tatuagem e artistas.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap tab-parc">
+    <div class="duo-box amarelo" id="tabacarias" style="background:#fff">
+      <span class="adesivo amarelo">Tabacarias e estúdios</span>
+      <h2>Exponha e ganhe 10%</h2>
+      <ul>
+        <li>A gente deixa unidades Tabaqu3 expostas no seu balcão.</li>
+        <li>Junto vai um QR code exclusivo da sua loja.</li>
+        <li>Cada venda feita pelo seu QR code rende 10% de comissão pra você.</li>
+        <li>Sem custo para começar. [confirmar com o Gabriel]</li>
+      </ul>
+      <a class="btn" href="#form">Quero expor na minha loja</a>
+    </div>
+    <div class="duo-box" id="artistas" style="background:#fff;border:2px solid var(--verde)">
+      <span class="adesivo verde">Artistas e tatuadores</span>
+      <h2>Seu desenho em 3D</h2>
+      <ul>
+        <li>A gente transforma seus desenhos em capas para isqueiro.</li>
+        <li>As peças são vendidas no site, no seu Instagram e no da Tabaqu3.</li>
+        <li>Dá para expor no seu estúdio, como na collab com o João Morais.</li>
+        <li>Condições combinadas caso a caso. [confirmar]</li>
+      </ul>
+      <a class="btn" href="colecoes-especiais.html">Ver a collab com o João</a>
+    </div>
+  </div>
+</section>
+
+<section id="form">
+  <div class="wrap">
+    <div class="cabeca"><div><h2>Fala com a gente</h2><p class="sub">Preenche aqui que o Gabriel te chama no WhatsApp.</p></div></div>
+    <form class="form" onsubmit="return false">
+      <label>Nome<input type="text"></label>
+      <label>WhatsApp<input type="tel" placeholder="(31) 9 0000-0000"></label>
+      <div class="full"><label>Você é</label>
+        <div class="radios" style="margin-top:6px"><label><input type="radio" name="p"> Tabacaria</label><label><input type="radio" name="p"> Estúdio de tatuagem</label><label><input type="radio" name="p"> Artista</label><label><input type="radio" name="p"> Outro</label></div></div>
+      <label>Nome da loja/estúdio<input type="text"></label>
+      <label>Cidade<input type="text" placeholder="Belo Horizonte/MG"></label>
+      <label class="full">Instagram<input type="text" placeholder="@"></label>
+      <label class="full">Mensagem<textarea></textarea></label>
+      <div class="full"><button class="btn" type="submit">Enviar</button></div>
+    </form>
+  </div>
+</section>
+
+<script src="partes.js"></script>
+</body>
+</html>
