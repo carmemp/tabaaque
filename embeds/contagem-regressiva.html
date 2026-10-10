@@ -1,14 +1,16 @@
 <!-- Cole TUDO isto no Wix: Adicionar > Embed > "Incorporar HTML" (Embed a widget / Código) -->
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@600;700&display=swap" rel="stylesheet">
 <style>
   html,body{margin:0;background:transparent}
-  .c{display:flex;gap:10px;font-family:Inter,sans-serif}
-  .c div{background:#1C1C1C;border:2px solid #333;padding:10px 12px;min-width:64px;text-align:center}
-  .c b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:32px;color:#F2EDE4;line-height:1.1}
-  .c small{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#9A948C}
-  .fim{font-family:Anton,Impact,sans-serif;color:#FF7A21;font-size:28px;text-transform:uppercase}
+  .c{display:flex;gap:22px;align-items:center;font-family:Inter,sans-serif}
+  .rot{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#C9560C;max-width:9ch;line-height:1.2}
+  .c b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:34px;color:#111;line-height:1}
+  .c small{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#6B6862}
+  .fim{font-family:Anton,Impact,sans-serif;color:#111;font-size:28px;text-transform:uppercase}
+  .fim span{color:#FF7A21}
 </style>
 <div class="c" id="c">
+  <span class="rot">Acaba em</span>
   <div><b id="d">00</b><small>dias</small></div>
   <div><b id="h">00</b><small>horas</small></div>
   <div><b id="m">00</b><small>min</small></div>
@@ -20,7 +22,7 @@
   function p(n){return String(n).padStart(2,'0')}
   function t(){
     var r = ALVO - Date.now();
-    if (r <= 0){ document.getElementById('c').innerHTML='<span class="fim">Últimas peças!</span>'; return; }
+    if (r <= 0){ document.getElementById('c').innerHTML='<span class="fim">Últimas peças<span>.</span></span>'; return; }
     d.textContent=p(Math.floor(r/864e5)); h.textContent=p(Math.floor(r/36e5)%24);
     m.textContent=p(Math.floor(r/6e4)%60); s.textContent=p(Math.floor(r/1e3)%60);
   }

@@ -1,0 +1,177 @@
+/* ===== Paleta e fontes: as MESMAS que vão no "Design do site" do Wix =====
+   Regra: fundo branco. Laranja e preto só como DESTAQUE (botões, preço, títulos curtos, selos). */
+:root{
+  --branco:#FFFFFF;     /* fundo principal */
+  --gelo:#F6F4F1;       /* fundo de seções alternadas / cards */
+  --linha:#E6E2DC;      /* bordas finas */
+  --preto:#111111;      /* textos e títulos */
+  --cinza:#6B6862;      /* texto secundário */
+  --laranja:#FF7A21;    /* DESTAQUE: botões, selos, detalhes */
+  --laranja-texto:#C9560C; /* laranja para texto pequeno em fundo branco (contraste) */
+  --f-titulo:'Anton', Impact, sans-serif;
+  --f-tag:'Permanent Marker', cursive;
+  --f-texto:'Inter', system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--branco);color:var(--preto);font-family:var(--f-texto);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.tag{font-family:var(--f-tag);color:var(--laranja-texto);transform:rotate(-2deg);display:inline-block;font-size:1.25rem}
+h1,h2,h3{font-family:var(--f-titulo);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+h2{font-size:clamp(2.2rem,5vw,3.4rem)}
+.sub{color:var(--cinza);max-width:56ch;margin-top:12px}
+.laranja{color:var(--laranja)}
+section{position:relative;padding:96px 0}
+.alt{background:var(--gelo)}
+.cabeca{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.link-seta{font-weight:700;text-decoration:none;border-bottom:2px solid var(--laranja);padding-bottom:2px;white-space:nowrap}
+.link-seta:hover{color:var(--laranja-texto)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.88rem;padding:1em 1.7em;border:2px solid var(--laranja);background:var(--laranja);color:var(--preto);text-decoration:none;border-radius:999px;transition:background .15s,color .15s}
+.btn:hover{background:var(--preto);border-color:var(--preto);color:var(--branco)}
+.btn.ghost{background:transparent;border-color:var(--preto);color:var(--preto)}
+.btn.ghost:hover{background:var(--preto);color:var(--branco)}
+
+/* faixa de aviso: fina, preta (único bloco escuro fixo) */
+.aviso{background:var(--preto);color:var(--branco);font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:.6em 16px}
+.aviso b{color:var(--laranja);font-weight:700}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{font-family:var(--f-tag);font-size:1.8rem;color:var(--preto);text-decoration:none;transform:rotate(-3deg)}
+.logo b{color:var(--laranja);font-weight:400}
+.menu{display:flex;gap:26px;list-style:none;font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.07em}
+.menu a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.menu a:hover,.menu a.ativo{border-color:var(--laranja)}
+.menu .especial a{color:var(--laranja-texto)}
+.carrinho{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.85rem;text-decoration:none}
+.carrinho i{font-style:normal;background:var(--preto);color:var(--branco);border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:.72rem}
+.hamb{display:none;background:none;border:0;font-size:1.6rem}
+@media (max-width:900px){.menu{display:none}.hamb{display:block}}
+
+/* HERO */
+.hero{padding:64px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(3.6rem,10vw,7.5rem)}
+.hero h1 .laranja{display:inline}
+.hero .lead{font-size:1.15rem;color:var(--cinza);max-width:34ch;margin:18px 0 30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-foto{position:relative}
+.hero-foto img{aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.selo{position:absolute;top:22px;left:-26px;background:var(--laranja);color:var(--preto);font-family:var(--f-tag);font-size:1.15rem;padding:.35em .9em;transform:rotate(-6deg);z-index:2}
+.contagem{display:flex;gap:22px;margin-top:36px;padding-top:22px;border-top:1px solid var(--linha);max-width:380px}
+.contagem b{display:block;font-family:var(--f-titulo);font-size:2.1rem;font-weight:400;line-height:1}
+.contagem small{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--cinza)}
+.contagem .rot{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--laranja-texto);font-weight:700;align-self:center;max-width:9ch;line-height:1.2}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:36px}.selo{left:10px}}
+
+/* risco escorrendo (detalhe pequeno, não divisor gigante) */
+.drip-mini{width:120px;height:22px;color:var(--laranja);margin-bottom:14px}
+
+/* PRODUTOS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
+.card{display:flex;flex-direction:column;text-decoration:none}
+.card .img{position:relative;background:var(--gelo);border-radius:6px;overflow:hidden}
+.card img{aspect-ratio:4/5;object-fit:cover;width:100%;transition:transform .4s}
+.card:hover img{transform:scale(1.03)}
+.faixa{position:absolute;top:12px;left:12px;background:var(--preto);color:var(--branco);font-weight:700;font-size:.68rem;text-transform:uppercase;padding:.4em .8em;letter-spacing:.08em;border-radius:99px}
+.faixa.lar{background:var(--laranja);color:var(--preto)}
+.card .info{padding:16px 2px 0;display:flex;flex-direction:column;gap:2px}
+.card h3{font-family:var(--f-texto);text-transform:none;font-weight:700;font-size:1.05rem;letter-spacing:0}
+.card .compat{color:var(--cinza);font-size:.88rem}
+.preco{font-weight:700;font-size:1.05rem;margin-top:6px}
+.preco s{font-weight:400;color:var(--cinza);margin-left:8px;font-size:.9rem}
+.card .btn{margin-top:14px;padding:.8em 1.2em;background:transparent;border-color:var(--preto);color:var(--preto)}
+.card:hover .btn{background:var(--laranja);border-color:var(--laranja);color:var(--preto)}
+
+/* POR QUE */
+.porque-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px}
+.item .num{font-family:var(--f-tag);color:var(--laranja);font-size:1.6rem}
+.item h3{font-size:1.35rem;margin:4px 0 8px}
+.item p{color:var(--cinza)}
+
+/* COLEÇÕES */
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.col{position:relative;text-decoration:none;display:block}
+.col .foto{aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:var(--gelo);position:relative}
+.col img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.col:hover img{transform:scale(1.04)}
+.col h3{font-size:1.6rem;margin-top:14px}
+.col small{color:var(--cinza)}
+.ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:var(--cinza);font-size:.85rem;
+  background:repeating-linear-gradient(-45deg,#EFECE7 0 14px,#F6F4F1 14px 28px)}
+.ph em{font-family:var(--f-tag);font-style:normal;font-size:3rem;color:var(--preto);display:block;opacity:.85}
+@media (max-width:860px){.col-grid{grid-template-columns:1fr}}
+
+/* COLEÇÕES ESPECIAIS: destaque na home (aqui o preto entra como bloco, uma vez só) */
+.especial-home{padding:0}
+.especial-box{display:grid;grid-template-columns:1fr 1fr;border-radius:8px;overflow:hidden;background:var(--preto);color:var(--branco)}
+.especial-box .txt{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}
+.especial-box .tag{color:var(--laranja)}
+.especial-box p{color:#BDB8B0;margin:14px 0 26px;max-width:44ch}
+.especial-box .btn.ghost{border-color:var(--branco);color:var(--branco);align-self:flex-start}
+.especial-box .btn.ghost:hover{background:var(--laranja);border-color:var(--laranja);color:var(--preto)}
+.especial-box .arte{position:relative;min-height:380px}
+.especial-box .ph{background:repeating-linear-gradient(-45deg,#1d1d1d 0 14px,#161616 14px 28px);color:#8a857e}
+.especial-box .ph em{color:var(--branco)}
+@media (max-width:860px){.especial-box{grid-template-columns:1fr}.especial-box .txt{padding:36px 24px}.especial-box .arte{min-height:260px}}
+
+/* PERSONALIZADO */
+.perso-box{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;border:2px dashed var(--laranja);border-radius:8px;padding:44px}
+@media (max-width:860px){.perso-box{grid-template-columns:1fr;padding:26px}}
+
+/* SOBRE */
+.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.sobre img{border-radius:6px;aspect-ratio:4/5;object-fit:cover}
+.sobre p{margin-top:16px;max-width:56ch;color:#3a3833}
+@media (max-width:860px){.sobre-grid{grid-template-columns:1fr;gap:30px}}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--linha);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--laranja);font-size:1.5rem;line-height:1;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--cinza);margin-top:10px;max-width:70ch}
+.faq-lista{max-width:860px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--linha);padding:56px 0 30px;background:var(--gelo)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer h4{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--cinza);margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px;font-size:.95rem}
+footer a{text-decoration:none}
+footer a:hover{color:var(--laranja-texto)}
+.legal{margin-top:44px;padding-top:20px;border-top:1px solid var(--linha);color:var(--cinza);font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:860px){.foot{grid-template-columns:1fr 1fr}}
+
+/* WhatsApp flutuante */
+.zap{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.zap svg{width:30px;height:30px;fill:#fff}
+
+/* nota de protótipo */
+.nota{position:fixed;left:12px;bottom:12px;z-index:40;background:var(--preto);color:var(--branco);font-size:.68rem;font-weight:700;padding:6px 10px;text-transform:uppercase;letter-spacing:.06em;border-radius:4px}
+
+/* ===== Página COLEÇÕES ESPECIAIS ===== */
+.ce-hero{padding:72px 0 56px;text-align:center}
+.ce-hero h1{font-size:clamp(3rem,9vw,6.5rem)}
+.ce-hero .sub{margin-inline:auto;font-size:1.1rem}
+.ce-collab{display:inline-flex;align-items:center;gap:14px;margin-top:22px;font-family:var(--f-tag);font-size:1.4rem}
+.ce-collab span{color:var(--laranja)}
+.artista{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.artista .foto{aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;background:var(--gelo)}
+.artista blockquote{font-family:var(--f-tag);font-size:1.5rem;line-height:1.35;margin:22px 0;padding-left:18px;border-left:4px solid var(--laranja)}
+.artista p{color:#3a3833;max-width:56ch;margin-top:12px}
+.artista .ig{display:inline-block;margin-top:18px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--laranja)}
+@media (max-width:860px){.artista{grid-template-columns:1fr;gap:30px}}
+.processo{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:p}
+.processo div{border-top:2px solid var(--preto);padding-top:16px}
+.processo h3{font-size:1.3rem;margin-bottom:6px}
+.processo p{color:var(--cinza)}
+@media (max-width:860px){.processo{grid-template-columns:1fr}}
+.proximas{text-align:center}
+.proximas form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.proximas input{font:inherit;padding:.9em 1.2em;border:1px solid var(--linha);border-radius:999px;min-width:min(320px,100%)}

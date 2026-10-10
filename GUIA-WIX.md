@@ -6,11 +6,13 @@
 
 | Arquivo | Para que serve |
 |---|---|
-| `prototipo/index.html` | O desenho do site. Abra no navegador e use como referência visual para montar no Wix (e para mostrar ao Gabriel) |
+| `prototipo/index.html` | O desenho da Home. Abra no navegador e use como referência visual para montar no Wix (e para mostrar ao Gabriel) |
+| `prototipo/colecoes-especiais.html` | O desenho da página Coleções Especiais (collab com o João) |
 | `conteudo/textos-do-site.md` | Todos os textos prontos para copiar e colar |
 | `assets/produtos/*.jpg` | Fotos já recortadas para os produtos da loja |
 | `assets/fotos/*.jpg` | Fotos originais convertidas de HEIC para JPG |
-| `assets/grafismos/drip-*.svg` | A "borda escorrendo" para usar entre seções |
+| `assets/grafismos/drip-mini.svg` | O risquinho "escorrendo" que vai acima dos títulos (detalhe pequeno) |
+| `assets/grafismos/drip-laranja.svg` | Versão larga da borda escorrendo. Opcional; use com moderação |
 | `embeds/contagem-regressiva.html` | O contador até o Halloween, para colar no Wix |
 
 > **Uma verdade importante sobre o Wix:** ele não importa um site pronto em código. A gente **remonta** o design dentro do editor, usando o protótipo como molde. Isso é bom: depois o Gabriel consegue mudar preço, foto e estoque sozinho, sem mexer em código.
@@ -22,11 +24,12 @@
 | Quando | O quê |
 |---|---|
 | 07 a 09/10 | Gabriel responde o briefing (bot). Criar a conta e o site, montar o Tema |
-| 09 a 13/10 | Montar Home + página Halloween + cadastrar produtos |
+| 09 a 13/10 | Montar Home + página Halloween + cadastrar produtos. Pedir ao João o material da collab |
 | 13 a 15/10 | Pagamentos, frete, políticas, domínio. Fotos novas, se tiver |
 | 16 a 17/10 | Celular, SEO, compra-teste de verdade |
 | **18 a 20/10** | **Publicar** e anunciar no Instagram |
-| Depois | Linhas Gatinho e Pássaros, página de personalizados |
+| 18 a 24/10 | Página **Coleções Especiais** com a collab do João (se o material chegar antes, entra já no lançamento) |
+| Depois | Linha Gatinho, página de personalizados |
 
 ---
 
@@ -49,13 +52,17 @@ No editor: **Design do site** (ícone de pincel no menu da esquerda) → **Cores
 
 | Uso | Cor | Hex |
 |---|---|---|
-| Fundo principal | Preto | `#0E0E0E` |
-| Fundo alternativo / cards | Asfalto | `#1C1C1C` |
-| Destaque, botões, preço | Laranja (a cor do filamento) | `#FF7A21` |
-| Laranja escuro (hover) | | `#D9580A` |
-| Texto claro / fundo claro | Osso | `#F2EDE4` |
-| Texto secundário | Cinza | `#9A948C` |
-| Acento "spray" (selos, faixas; usar pouco) | Limo | `#C6FF3D` |
+| Fundo principal | Branco | `#FFFFFF` |
+| Fundo de seções alternadas, cards | Gelo | `#F6F4F1` |
+| Linhas e bordas finas | Linha | `#E6E2DC` |
+| Títulos e textos | Preto | `#111111` |
+| Texto secundário | Cinza | `#6B6862` |
+| **Destaque**: botão principal, selos, ponto final dos títulos | Laranja (a cor do filamento) | `#FF7A21` |
+| Laranja para texto pequeno em fundo branco (as "tags") | Laranja escuro | `#C9560C` |
+
+> **A regra do site:** o fundo é sempre branco ou gelo. Laranja e preto só aparecem como **destaque**: o botão principal, os selos, o ponto laranja no fim do título ("DERRETEU**.**"), a faixa de aviso no topo e **um único bloco preto** na Home (o da collab com o João). Se uma seção inteira ficar laranja ou preta, está pesado demais.
+>
+> As fotos de produto já têm fundo claro (mesa branca), então combinam naturalmente com o site branco.
 
 **Design do site → Temas de texto:**
 
@@ -67,7 +74,10 @@ No editor: **Design do site** (ícone de pincel no menu da esquerda) → **Cores
 
 Se Anton ou Permanent Marker não aparecerem na lista: no seletor de fontes clique em **Fontes → Fazer upload de fontes** e suba os arquivos `.ttf`. Os dois são gratuitos no **fonts.google.com** (procure o nome → *Get font* → *Download*).
 
-**Botões:** retangulares (raio 0), fundo laranja, texto preto em negrito, borda 3px. Para o efeito de "sombra deslocada" do protótipo: *Design do botão → Sombra*, distância 6, desfoque 0, cor `#F2EDE4`.
+**Botões** (crie 2 estilos em *Design do site → Botões*):
+- **Principal:** formato pílula (cantos totalmente arredondados), fundo laranja `#FF7A21`, texto preto em negrito e maiúsculo. Ao passar o mouse: fundo preto, texto branco. Use **um por seção**, no máximo.
+- **Secundário:** pílula, fundo transparente, borda preta de 2px, texto preto. Ao passar o mouse: fundo preto. É o botão dos cards de produto e o "Ver a loja".
+- Sem sombra.
 
 ---
 
@@ -76,9 +86,9 @@ Se Anton ou Permanent Marker não aparecerem na lista: no seletor de fontes cliq
 Eles aparecem em todas as páginas, então monte uma vez só.
 
 **Cabeçalho** (veja o topo do protótipo):
-1. Uma **faixa** laranja fina no topo com o texto da faixa de aviso (em `textos-do-site.md`). Se quiser o texto andando: *Adicionar → Texto → Texto em movimento (Marquee)*; se não achar, deixe o texto parado.
-2. Abaixo, fundo preto: **logo** à esquerda (por enquanto o nome "Tabaque" em Permanent Marker; troque pela logo oficial quando o Gabriel mandar o PNG/SVG).
-3. **Menu**: *Adicionar → Menu*. Itens: Halloween · Loja · Personalizado · Sobre · Dúvidas.
+1. Uma **faixa preta fina** (uns 32 px) no topo com o texto da faixa de aviso (em `textos-do-site.md`), texto branco pequeno e a palavra "Halloween:" em laranja.
+2. Abaixo, fundo **branco** com uma linha fina `#E6E2DC` embaixo: **logo** à esquerda (por enquanto o nome "Tabaque" em Permanent Marker; troque pela logo oficial quando o Gabriel mandar o PNG/SVG).
+3. **Menu**: *Adicionar → Menu*. Itens: Halloween · Loja · **Coleções Especiais** · Personalizado · Sobre · Dúvidas. Deixe só o item "Coleções Especiais" com o texto em laranja escuro `#C9560C`, para chamar atenção (no Wix: clique no menu → *Design* → personalize o item, ou use um texto com link no lugar desse item).
 4. **Ícone do carrinho**: *Adicionar → Loja → Ícone do carrinho*.
 5. Clique no cabeçalho → **Rolagem → Fixo** (ele fica grudado no topo).
 
@@ -103,7 +113,7 @@ Para a **Abóbora Derretida**, recomendo **1 produto com 2 opções** (o cliente
 7. Ative **Gerenciar preço e estoque das variantes**: aí você põe um preço e uma **quantidade** diferente para cada tamanho.
 8. **Estoque**: ative **Rastrear estoque** e coloque o número de peças da edição limitada. Quando zerar, o site mostra "Esgotado" sozinho, e isso cria escassez real.
 9. **Informações de envio**: **peso** (ex.: 0,05 kg, mas pese uma peça embalada). Sem peso, o frete calculado não funciona.
-10. **Categoria / Coleção**: crie a categoria **Halloween** e marque. (Crie também **Gatinho** e **Pássaros**, mesmo vazias.)
+10. **Categoria / Coleção**: crie a categoria **Halloween** e marque. (Crie também **Gatinho** e **Collab João**, mesmo vazias. A categoria **Collab João** é a que vai alimentar a página Coleções Especiais.)
 11. **Seções de informações extras**: adicione "Envio" e "Trocas" com os textos do arquivo.
 12. **SEO** (fim da página do produto): título e descrição de `textos-do-site.md`.
 
@@ -120,24 +130,35 @@ Depois cadastre o **Combo Família Derretida** como outro produto, com faixa `Co
 Abra `prototipo/index.html` ao lado do Wix e vá recriando **seção por seção**. No Wix: *Adicionar → Seção → Seção em branco*. Uma seção do Wix = um bloco do protótipo.
 
 ### Home (de cima pra baixo)
-1. **Hero** (fundo `#0E0E0E`): texto "coleção halloween 2026" (Título 3), "DERRETEU." (Título 1, bem grande, laranja), parágrafo, 2 botões. À direita, a foto `abobora-grande.jpg` com borda clara de 4px e levemente girada (arraste a alça de girar até ~2°). O selo verde "Edição limitada": *Adicionar → Formas → círculo* + texto.
-2. **Contador**: *Adicionar → Embed → Incorporar HTML* (pode aparecer como "Código HTML" / "Embed a widget"). Clique em **Inserir código**, cole tudo de `embeds/contagem-regressiva.html` e ajuste a caixa para mais ou menos 330 × 90 px.
-3. **Borda escorrendo**: suba `assets/grafismos/drip-laranja.svg` em *Adicionar → Imagem → Fazer upload* (o Wix aceita SVG) e estique na largura total, colado no começo da seção laranja.
-4. **Produtos Halloween** (fundo laranja `#FF7A21`): título "Abóbora Derretida" + texto + *Adicionar → Loja → Galeria de produtos* (ou "Grade"). Nas configurações da galeria escolha **Coleção/Categoria: Halloween**. Em **Design**, deixe o card com fundo preto, nome em Anton, preço laranja e o botão "Adicionar ao carrinho" visível.
-5. **Por que Tabaque?** (fundo preto): título + 4 colunas (*Adicionar → Layout → Colunas / Repetidor*).
-6. **Coleções** (fundo `#1C1C1C`): 3 caixas com imagem + rótulo, cada uma com **link para a categoria** correspondente da loja.
-7. **Faz o seu.**: caixa com borda tracejada laranja + botão do WhatsApp (link em `textos-do-site.md`).
-8. **Sobre** (fundo osso `#F2EDE4`, texto preto): foto + texto.
-9. **Dúvidas**: *Adicionar → Listas/Interativo → Acordeão* (ou o app **Wix FAQ**) com as perguntas do arquivo.
+1. **Hero** (fundo branco): texto "coleção halloween 2026" (Título 3, laranja escuro), "DERRETEU." (Título 1, bem grande, **preto**, só o ponto final em laranja: selecione o ponto e mude a cor), parágrafo em cinza, botão principal + botão secundário. À direita, a foto `abobora-grande.jpg` com cantos levemente arredondados (6 px), **sem borda e sem girar**. Selo "edição limitada": retângulo laranja pequeno, levemente inclinado, com o texto em Permanent Marker.
+2. **Contador**: *Adicionar → Embed → Incorporar HTML* (pode aparecer como "Código HTML" / "Embed a widget"). Clique em **Inserir código**, cole tudo de `embeds/contagem-regressiva.html` e ajuste a caixa para mais ou menos 380 × 70 px. Coloque uma linha fina acima dele.
+3. **Produtos Halloween** (fundo gelo `#F6F4F1`): um **risquinho escorrendo** pequeno acima do título (suba `assets/grafismos/drip-mini.svg` em *Adicionar → Imagem → Fazer upload*; o Wix aceita SVG), título "Abóbora Derretida" + texto + *Adicionar → Loja → Galeria de produtos* (ou "Grade"). Nas configurações da galeria escolha **Categoria: Halloween**. Em **Design**: card sem borda, foto com cantos de 6 px, nome em Inter negrito, preço preto, botão "Adicionar ao carrinho" no estilo **secundário** (contornado).
+4. **Por que Tabaque?** (fundo branco): título + 4 colunas (*Adicionar → Layout → Colunas / Repetidor*). Só os números "01, 02..." em laranja.
+5. **Coleções Especiais: destaque** (fundo branco, com uma **caixa preta** de cantos arredondados no meio): à esquerda "coleções especiais" (tag laranja), "TABAQUE × JOÃO" (branco, com o × laranja), texto curto e um botão contornado branco "Conhecer a collab", com link para a página **Coleções Especiais**. À direita, a foto da collab. **É o único bloco preto da Home**, e é isso que faz ele chamar atenção.
+6. **Coleções** (fundo branco): 3 fotos com título embaixo (Halloween / Gatinho / Pássaros × João), cada uma com **link** para a categoria (a terceira vai para a página Coleções Especiais).
+7. **Faz o seu.** (fundo branco): caixa com borda tracejada laranja + botão principal do WhatsApp (link em `textos-do-site.md`).
+8. **Sobre** (fundo gelo `#F6F4F1`): foto + texto.
+9. **Dúvidas** (fundo branco): *Adicionar → Listas/Interativo → Acordeão* (ou o app **Wix FAQ**) com as perguntas do arquivo.
+10. **Rodapé** em fundo gelo, com textos pretos e cinza.
 
 ### Página "Halloween" (landing do lançamento)
 *Páginas → + Adicionar página*. Pode **duplicar a Home** e deixar só: Hero + contador + produtos + "por que" + FAQ. É essa página que vai no link da bio do Instagram e nos anúncios.
 
+### Página "Coleções Especiais" (collab com o João)
+Referência: `prototipo/colecoes-especiais.html`. *Páginas → + Adicionar página → Em branco*, nome **Coleções Especiais** (o endereço fica `/colecoes-especiais`). Textos prontos em `textos-do-site.md`.
+1. **Topo** (branco, tudo centralizado): tag "coleções especiais", título "TABAQUE × JOÃO" (× em laranja), texto de apresentação, e "coleção pássaros".
+2. **A coleção** (fundo gelo): *Galeria de produtos* filtrada pela categoria **Collab João**. Faixa (ribbon) dos produtos: `Collab`.
+3. **O artista** (branco): foto do João à esquerda; à direita bio, uma frase dele em destaque (Permanent Marker, com uma barrinha laranja à esquerda) e o link para o Instagram dele.
+4. **Do papel pro 3D** (fundo gelo): 3 colunas: o desenho → a modelagem → a impressão. Se tiver fotos do processo (esboço, tela do 3D, impressora), coloque aqui. Isso valoriza muito a collab.
+5. **Próximas collabs** (branco): *Adicionar → Formulário → Inscrição/Newsletter* (Wix Forms) com o campo de e-mail. Os contatos caem em **Painel → Contatos**, e dá para avisar todo mundo quando sair a próxima collab.
+
+> Quando vier a próxima collab, é só duplicar as seções 1 a 4 nessa mesma página (a mais nova em cima) e criar uma categoria nova na loja. A aba vira o "arquivo" de todas as collabs da Tabaque.
+
 ### Página "Loja"
-Já foi criada pelo Wix Stores. Em *Configurações da galeria*, ative o **filtro por categoria** (Halloween / Gatinho / Pássaros) e aplique o mesmo design dos cards.
+Já foi criada pelo Wix Stores. Em *Configurações da galeria*, ative o **filtro por categoria** (Halloween / Gatinho / Collab João) e aplique o mesmo design dos cards.
 
 ### Página do produto, Carrinho e Checkout
-Clique na página do produto → **Configurações / Design** → ajuste fontes e cores para o tema (botão laranja, fundo escuro). No carrinho, ative **campo de cupom** e **nota para o vendedor**.
+Clique na página do produto → **Configurações / Design** → ajuste fontes e cores para o tema (fundo branco, botão "Adicionar ao carrinho" laranja). No carrinho, ative **campo de cupom** e **nota para o vendedor**.
 
 ### Sobre e Dúvidas
 Páginas simples com o texto completo, quando o briefing chegar.
@@ -148,7 +169,7 @@ Páginas simples com o texto completo, quando o briefing chegar.
 
 A maioria da venda vai vir pelo Instagram, ou seja, pelo celular.
 No topo do editor clique no **ícone de celular**. O Wix reorganiza tudo, mas sempre bagunça um pouco:
-- Use o print mobile do protótipo como referência: tudo em **uma coluna**, foto do hero **abaixo** do texto.
+- Use o protótipo aberto no celular como referência: tudo em **uma coluna**, foto do hero **abaixo** do texto, e na caixa preta da collab a foto vai **embaixo** do texto.
 - "DERRETEU." precisa caber numa linha (diminua a fonte só no celular).
 - Botões com largura cheia.
 - Esconda no celular o que não couber (clique → *ícone de olho → Ocultar*), em vez de espremer.
@@ -249,7 +270,8 @@ Mostre só isto para ele, no **app Wix** do celular (é onde ele vai viver):
 - [ ] Preços: Grande, Mini, Combo; desconto no Pix?
 - [ ] Quantas peças de cada (edição limitada)
 - [ ] Material (PLA/PETG), se vem com isqueiro, prazo de produção
-- [ ] Fotos das linhas Gatinho e Pássaros + nome/@ do tatuador
+- [ ] Fotos da linha Gatinho
+- [ ] Collab com o João: fotos dos modelos, nomes e preços, @ do Instagram, mini bio, uma frase dele, como a collab surgiu, fotos do processo (esboço → 3D → impressão) e uma foto do João
 - [ ] História da marca e do nome
 - [ ] CNPJ/razão social, endereço, e-mail, WhatsApp, @ do Instagram
 - [ ] Domínio (já tem?)
@@ -257,7 +279,7 @@ Mostre só isto para ele, no **app Wix** do celular (é onde ele vai viver):
 - [ ] Decisão sobre o aviso +18
 
 ## Dica de foto (pra ficar MUITO melhor)
-As fotos atuais são boas para começar, mas o fundo de casa (mesa branca e plantas) não conversa com a vibe de rua. Para o lançamento, vale uma sessão rápida com o celular mesmo:
-- **Muro pichado ou parede de tijolo** ao fundo, à noite, com a lanterna do celular de lado (sombra dura = clima de Halloween).
-- **Mão segurando** o isqueiro com o case (mostra tamanho e escala).
-- Uma foto em **fundo preto liso** para os cards da loja. Combina com o site e deixa o laranja explodir.
+Com o site branco, as fotos atuais (mesa branca) já combinam bem. Para ficar ainda mais profissional, vale uma sessão rápida com o celular mesmo:
+- **Fotos de loja (cards):** produto em fundo **branco ou bege bem claro**, luz de janela, sem planta nem móvel aparecendo. Todas no mesmo enquadramento (vertical 4:5), para a grade ficar alinhada.
+- **Fotos de clima (hero, coleções, redes):** aqui entra a rua: **muro pichado**, mão segurando o isqueiro, foto à noite com a lanterna do celular de lado. Elas trazem a vibe de grafite sem pesar o site.
+- **Collab do João:** foto dele no estúdio + o desenho original em papel ao lado do case pronto.

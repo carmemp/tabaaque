@@ -9,7 +9,7 @@
 🎃 Coleção Halloween: edição limitada · Frete para todo o Brasil · Feito em impressão 3D · Pix com desconto
 
 ## Menu
-Halloween · Loja · Personalizado · Sobre · Dúvidas
+Halloween · Loja · **Coleções Especiais** · Personalizado · Sobre · Dúvidas
 
 ---
 
@@ -38,7 +38,13 @@ Halloween · Loja · Personalizado · Sobre · Dúvidas
 ### Coleções
 - **Halloween**: Edição limitada
 - **Gatinho**: Fofura com atitude
-- **Pássaros**: Collab com [@tatuador]
+- **Pássaros × João**: Coleção especial (link para a página Coleções Especiais)
+
+### Coleções Especiais (bloco preto de destaque)
+- **Tag:** coleções especiais
+- **Título:** TABAQUE × JOÃO
+- **Texto:** A primeira collab da Tabaque: os traços do tatuador João viraram cases em 3D. Tiragem pequena, assinada pelo artista.
+- **Botão:** Conhecer a collab → página Coleções Especiais
 
 ### Personalizado
 - **Título:** Faz o seu.
@@ -83,9 +89,58 @@ Halloween · Loja · Personalizado · Sobre · Dúvidas
 - **Preço:** R$ [XX,XX] (riscado: soma dos dois)
 - **Descrição:** As duas abóboras de uma vez: uma pro BIC grande, outra pro mini. Uma pra você, outra pra quem você quiser assustar.
 
-### Linhas Gatinho e Pássaros
+### Linha Gatinho
 - [Aguardando fotos, nomes dos modelos e preços]
-- Pássaros: "Collab com [nome do tatuador] ([@instagram]). [Como surgiu a parceria]."
+
+### Produtos da collab com o João (categoria "Collab João")
+- **Faixa (ribbon):** Collab
+- **Nome:** [Nome do modelo], ex.: "Andorinha por João"
+- **Descrição (modelo):**
+
+  > Desenhado à mão pelo tatuador João e transformado em relevo 3D pela Tabaque.
+  > [1 frase sobre o desenho: o que é o pássaro, o que significa pra ele.]
+  >
+  > - Parte da coleção especial Tabaque × João
+  > - Feito para isqueiro BIC [grande/mini]
+  > - Tiragem limitada: [X] peças
+  > - Isqueiro não incluso [confirmar]
+
+---
+
+## PÁGINA COLEÇÕES ESPECIAIS
+**SEO - título:** Coleções Especiais | Tabaque × João
+**SEO - descrição:** Collab da Tabaque com o tatuador João: cases para isqueiro BIC impressos em 3D com a arte dele. Tiragem limitada.
+
+### Topo
+- **Tag:** coleções especiais
+- **Título:** TABAQUE × JOÃO
+- **Texto:** Uma vez por temporada, a Tabaque chama um artista pra desenhar com a gente. A primeira collab é com o tatuador João: os traços dele saíram da pele e foram parar no seu isqueiro.
+- **Linha final:** coleção pássaros
+
+### A coleção
+- **Título:** A coleção
+- **Texto:** Tiragem pequena. Quando acabar, não volta.
+
+### O artista
+- **Tag:** o artista
+- **Título:** Quem é o João
+- **Bio:** [Há quanto tempo tatua, estúdio/cidade, estilo (ex.: blackwork, fineline, old school), o que inspira os pássaros.]
+- **Frase em destaque:** "[Uma frase do João sobre a collab.]"
+- **Como surgiu:** [Amizade com o Gabriel, primeira conversa, por que pássaros.]
+- **Link:** Ver o trabalho do João no Instagram: @[instagram]
+
+### Do papel pro 3D
+- **Tag:** do papel pro 3D
+- **Título:** Como a collab nasceu
+1. **O desenho**: O João desenha à mão, do mesmo jeito que faz um flash de tatuagem.
+2. **A modelagem**: A Tabaque transforma o traço em relevo 3D, ajustado à forma do isqueiro.
+3. **A impressão**: Cada case é impresso camada por camada, revisado e assinado. [confirmar se vai assinado]
+
+### Próximas collabs
+- **Tag:** vem mais por aí
+- **Título:** Próximas collabs
+- **Texto:** Deixa seu e-mail pra saber antes de todo mundo quando sair a próxima. É artista e quer fazer uma collab? Chama no WhatsApp.
+- **Campo:** seu@email.com · **Botão:** Quero saber
 
 ---
 
