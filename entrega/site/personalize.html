@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personalize | Tabaqu3</title>
+<meta name="description" content="Capa para isqueiro BIC personalizada, impressa em 3D. Mande sua ideia, escolha a cor: R$ 59,90.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== TABAQU3: estilo do protótipo (mesmas cores e fontes que vão no "Design do site" do Wix) =====
+   Regra: base branca e clean. As cores de grafite (laranja, azul, verde, amarelo, vermelho)
+   aparecem só como DESTAQUE: adesivos, botões, detalhes. Cada área do site tem a sua cor:
+   Halloween = laranja · Personalize = azul · Collabs = verde · Parcerias = amarelo · Avisos/promo = vermelho */
+:root{
+  --branco:#FFFFFF;
+  --gelo:#F5F4F2;       /* seções alternadas */
+  --linha:#E5E2DD;
+  --preto:#111111;
+  --cinza:#66635E;
+  --laranja:#FF6A13;
+  --azul:#2F5BFF;
+  --verde:#13A86B;
+  --amarelo:#FFC61A;
+  --vermelho:#EE3124;
+  --lilas:#B79CFF;      /* só para mostrar as cores de filamento da personalização */
+  --cinza-fil:#9C9C9C;
+  --f-titulo:'Anton', Impact, sans-serif;
+  --f-texto:'Inter', system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--branco);color:var(--preto);font-family:var(--f-texto);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--f-titulo);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+h2{font-size:clamp(2.2rem,5vw,3.4rem)}
+.sub{color:var(--cinza);max-width:58ch;margin-top:12px}
+section{position:relative;padding:96px 0}
+.alt{background:var(--gelo)}
+.cabeca{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:40px}
+.link-seta{font-weight:700;text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:2px;white-space:nowrap}
+
+/* ADESIVO: o elemento "grafite" do site. Etiqueta colorida, levemente torta, como sticker colado na parede */
+.adesivo{display:inline-block;font-family:var(--f-texto);font-weight:800;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.45em .9em;background:var(--laranja);color:var(--preto);transform:rotate(-2deg);margin-bottom:14px;border-radius:2px}
+.adesivo.azul{background:var(--azul);color:#fff}
+.adesivo.verde{background:var(--verde);color:#fff}
+.adesivo.amarelo{background:var(--amarelo)}
+.adesivo.vermelho{background:var(--vermelho);color:#fff}
+.adesivo.preto{background:var(--preto);color:#fff}
+.c-laranja{color:var(--laranja)} .c-azul{color:var(--azul)} .c-verde{color:var(--verde)} .c-vermelho{color:var(--vermelho)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.86rem;
+  padding:1em 1.7em;border:2px solid var(--preto);background:var(--preto);color:#fff;text-decoration:none;border-radius:999px;cursor:pointer;font-family:var(--f-texto);transition:.15s}
+.btn:hover{background:var(--laranja);border-color:var(--laranja);color:var(--preto)}
+.btn.ghost{background:transparent;color:var(--preto)}
+.btn.ghost:hover{background:var(--preto);color:#fff}
+.btn.laranja{background:var(--laranja);border-color:var(--laranja);color:var(--preto)}
+.btn.laranja:hover{background:var(--preto);border-color:var(--preto);color:#fff}
+.btn.azul{background:var(--azul);border-color:var(--azul);color:#fff}
+.btn.azul:hover{background:var(--preto);border-color:var(--preto)}
+
+/* faixa de aviso */
+.aviso{background:var(--preto);color:#fff;font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:.6em 16px}
+.aviso b{color:var(--laranja)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .t3{width:42px;height:42px}
+.logo span{font-family:var(--f-titulo);font-size:1.45rem;letter-spacing:.04em}
+.menu{display:flex;gap:24px;list-style:none;font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.07em}
+.menu a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.menu a:hover,.menu a.ativo{border-color:var(--preto)}
+.menu .m-hall a{color:var(--laranja)}
+.menu .m-esp a:hover,.menu .m-esp a.ativo{border-color:var(--verde)}
+.menu .m-pers a:hover,.menu .m-pers a.ativo{border-color:var(--azul)}
+.menu .m-parc a:hover,.menu .m-parc a.ativo{border-color:var(--amarelo)}
+.carrinho{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.85rem;text-decoration:none}
+.carrinho i{font-style:normal;background:var(--preto);color:#fff;border-radius:99px;min-width:22px;height:22px;display:grid;place-items:center;font-size:.72rem}
+.hamb{display:none;background:none;border:0;font-size:1.6rem}
+@media (max-width:980px){.menu{display:none}.hamb{display:block}}
+
+/* HERO */
+.hero{padding:64px 0 88px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(3.4rem,9vw,7rem)}
+.hero .lead{font-size:1.15rem;color:var(--cinza);max-width:36ch;margin:18px 0 26px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-foto{position:relative}
+.hero-foto img{aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.hero-foto .adesivo{position:absolute;top:20px;left:-18px;font-size:.85rem;z-index:2}
+.hero-foto .adesivo.b{top:auto;bottom:26px;left:auto;right:-14px;transform:rotate(3deg)}
+.estoque{margin-top:30px;max-width:380px}
+.estoque .barra{height:8px;background:var(--gelo);border-radius:99px;overflow:hidden;margin:8px 0 6px}
+.estoque .barra i{display:block;height:100%;width:62%;background:var(--laranja)}
+.estoque small{color:var(--cinza);font-size:.8rem}
+.estoque b{font-size:.85rem}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:36px}.hero-foto .adesivo{left:10px}.hero-foto .adesivo.b{right:10px}}
+
+/* PROMO leve 2 */
+.promo{display:flex;align-items:center;gap:16px;flex-wrap:wrap;border:2px solid var(--preto);border-radius:6px;padding:16px 20px;margin-bottom:34px;background:#fff}
+.promo .adesivo{margin:0}
+.promo p{font-weight:600}
+.promo p span{color:var(--cinza);font-weight:400}
+
+/* PRODUTOS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
+.cards.dois{grid-template-columns:repeat(auto-fit,minmax(260px,380px))}
+.card{display:flex;flex-direction:column;text-decoration:none}
+.card .img{position:relative;background:var(--gelo);border-radius:6px;overflow:hidden}
+.card img{aspect-ratio:4/5;object-fit:cover;width:100%;transition:transform .4s}
+.card:hover img{transform:scale(1.03)}
+.faixa{position:absolute;top:12px;left:12px;background:var(--preto);color:#fff;font-weight:700;font-size:.68rem;text-transform:uppercase;padding:.4em .8em;letter-spacing:.08em;border-radius:99px}
+.faixa.laranja{background:var(--laranja);color:var(--preto)}
+.faixa.verde{background:var(--verde)}
+.card .info{padding:16px 2px 0;display:flex;flex-direction:column;gap:2px}
+.card h3{font-family:var(--f-texto);text-transform:none;font-weight:700;font-size:1.05rem;letter-spacing:0}
+.card .compat{color:var(--cinza);font-size:.88rem}
+.preco{font-weight:700;font-size:1.1rem;margin-top:6px}
+.preco small{font-weight:400;color:var(--cinza);font-size:.82rem;margin-left:6px}
+.card .btn{margin-top:14px;padding:.8em 1.2em;background:transparent;color:var(--preto)}
+.card:hover .btn{background:var(--preto);color:#fff}
+.ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:var(--cinza);font-size:.85rem;
+  background:repeating-linear-gradient(-45deg,#EEECE8 0 14px,#F5F4F2 14px 28px)}
+.ph em{font-family:var(--f-titulo);font-style:normal;font-size:2.6rem;color:var(--preto);display:block;opacity:.85}
+.ph-box{position:relative;aspect-ratio:4/5}
+
+/* POR QUE */
+.porque-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px}
+.item .bolinha{width:14px;height:14px;border-radius:50%;margin-bottom:14px}
+.item h3{font-size:1.35rem;margin-bottom:8px}
+.item p{color:var(--cinza)}
+
+/* COLEÇÕES */
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.col{text-decoration:none;display:block}
+.col .foto{aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:var(--gelo);position:relative}
+.col img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.col:hover img{transform:scale(1.04)}
+.col .rot{display:flex;align-items:center;gap:10px;margin-top:14px}
+.col .rot i{width:12px;height:12px;border-radius:50%}
+.col h3{font-size:1.5rem}
+.col small{color:var(--cinza);display:block;margin-top:2px}
+@media (max-width:860px){.col-grid{grid-template-columns:1fr}}
+
+/* BLOCO COLLAB (o único bloco escuro da Home) */
+.especial-box{display:grid;grid-template-columns:1fr 1fr;border-radius:8px;overflow:hidden;background:var(--preto);color:#fff}
+.especial-box .txt{padding:56px 48px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.especial-box p{color:#BDB8B0;margin:14px 0 26px;max-width:46ch}
+.especial-box .btn{background:transparent;border-color:#fff}
+.especial-box .btn:hover{background:var(--verde);border-color:var(--verde);color:#fff}
+.especial-box .arte{position:relative;min-height:380px}
+.especial-box .ph{background:repeating-linear-gradient(-45deg,#1d1d1d 0 14px,#161616 14px 28px);color:#8a857e}
+.especial-box .ph em{color:#fff}
+@media (max-width:860px){.especial-box{grid-template-columns:1fr}.especial-box .txt{padding:36px 24px}.especial-box .arte{min-height:260px}}
+
+/* DOIS BLOCOS (personalize + parcerias) */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.duo-box{border-radius:8px;padding:44px 40px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.duo-box p{color:var(--cinza);margin:8px 0 22px;max-width:44ch}
+.duo-box.azul{border:2px solid var(--azul)}
+.duo-box.amarelo{border:2px solid var(--amarelo);background:#FFFBEA}
+.duo-box .preco-grande{font-family:var(--f-titulo);font-size:2rem}
+@media (max-width:860px){.duo{grid-template-columns:1fr}.duo-box{padding:30px 24px}}
+
+/* cores de filamento */
+.cores{display:flex;gap:14px;flex-wrap:wrap;margin:6px 0 4px}
+.cor{display:flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600}
+.cor i{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+
+/* SOBRE */
+.sobre-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.sobre img{border-radius:6px;aspect-ratio:4/5;object-fit:cover}
+.sobre p{margin-top:16px;max-width:56ch;color:#3a3833}
+.palavras{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.palavras .adesivo{margin:0}
+@media (max-width:860px){.sobre-grid{grid-template-columns:1fr;gap:30px}}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--linha);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;line-height:1;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--cinza);margin-top:10px;max-width:70ch}
+.faq-lista{max-width:860px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--linha);padding:56px 0 30px;background:var(--gelo)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+footer h4{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--cinza);margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px;font-size:.95rem}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+.legal{margin-top:44px;padding-top:20px;border-top:1px solid var(--linha);color:var(--cinza);font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:860px){.foot{grid-template-columns:1fr 1fr}}
+
+.zap{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.zap svg{width:30px;height:30px;fill:#fff}
+.nota{position:fixed;left:12px;bottom:12px;z-index:40;background:var(--preto);color:#fff;font-size:.68rem;font-weight:700;padding:6px 10px;text-transform:uppercase;letter-spacing:.06em;border-radius:4px}
+
+/* PORTA +18 (Wix: Lightbox que abre ao carregar a página) */
+.portao{position:fixed;inset:0;z-index:100;background:rgba(17,17,17,.6);backdrop-filter:blur(6px);display:grid;place-items:center;padding:16px}
+.portao[hidden]{display:none}
+.portao .caixa{background:#fff;border-radius:10px;padding:40px 34px;max-width:420px;text-align:center}
+.portao .t3{width:64px;height:64px;margin:0 auto 18px}
+.portao h2{font-size:2rem}
+.portao p{color:var(--cinza);margin:10px 0 24px}
+.portao .acoes{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* ===== Páginas internas ===== */
+.topo{padding:72px 0 56px;text-align:center}
+.topo h1{font-size:clamp(3rem,8vw,6rem)}
+.topo .sub{margin-inline:auto;font-size:1.1rem}
+.artista{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.artista .foto{aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;background:var(--gelo)}
+.artista blockquote{font-size:1.25rem;font-weight:600;line-height:1.45;margin:22px 0;padding-left:18px;border-left:4px solid var(--verde)}
+.artista p{color:#3a3833;max-width:56ch;margin-top:12px}
+.artista .ig{display:inline-block;margin-top:18px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--verde)}
+@media (max-width:860px){.artista{grid-template-columns:1fr;gap:30px}}
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.passos.tres{grid-template-columns:repeat(3,1fr)}
+.passos div{border-top:2px solid var(--preto);padding-top:16px}
+.passos .n{font-family:var(--f-titulo);font-size:2.2rem;line-height:1}
+.passos h3{font-size:1.25rem;margin:6px 0}
+.passos p{color:var(--cinza)}
+@media (max-width:860px){.passos,.passos.tres{grid-template-columns:1fr}}
+
+/* formulário (Wix Forms) */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:820px}
+.form .full{grid-column:1/-1}
+.form label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:.88rem}
+.form input,.form select,.form textarea{font:inherit;font-weight:400;padding:.85em 1em;border:1px solid var(--linha);border-radius:6px;background:#fff}
+.form textarea{min-height:120px;resize:vertical}
+.form .upload{border:2px dashed var(--linha);border-radius:6px;padding:24px;text-align:center;color:var(--cinza);font-weight:400}
+.form .check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;color:var(--cinza)}
+.form .check input{margin-top:4px}
+.form .radios{display:flex;gap:10px;flex-wrap:wrap}
+.form .radios label{flex-direction:row;align-items:center;gap:8px;border:1px solid var(--linha);border-radius:99px;padding:.5em 1em;font-weight:600}
+@media (max-width:700px){.form{grid-template-columns:1fr}}
+.aviso-box{border-left:4px solid var(--azul);background:#F1F4FF;padding:18px 20px;border-radius:4px;color:#2b2f45;max-width:820px;margin-bottom:32px}
+.aviso-box.amarelo{border-color:var(--amarelo);background:#FFFBEA;color:#3d3415}
+.tab-parc{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.tab-parc .duo-box ul{margin:4px 0 22px 18px;color:#3a3833;display:grid;gap:6px}
+@media (max-width:860px){.tab-parc{grid-template-columns:1fr}}
+.centro{text-align:center}
+.centro .sub{margin-inline:auto}
+
+</style>
+</head>
+<body data-pagina="pers">
+
+<section class="topo">
+  <div class="wrap">
+    <span class="adesivo azul">Personalize</span>
+    <h1>Faz a sua<span class="c-azul">.</span></h1>
+    <p class="sub">Seu nome, seu desenho, o logo do seu estúdio ou aquela ideia que só você entende. A gente transforma em capa 3D para o seu BIC.</p>
+    <p style="margin-top:22px"><span style="font-family:var(--f-titulo);font-size:2.4rem">R$ 59,90</span></p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="cabeca"><div><h2>Como funciona</h2></div></div>
+    <div class="passos">
+      <div><span class="n c-azul">1</span><h3>Conta a ideia</h3><p>Preencha o formulário com a descrição e mande suas referências (fotos, desenhos, prints).</p></div>
+      <div><span class="n c-azul">2</span><h3>Escolhe cor e tamanho</h3><p>Laranja, lilás, cinza ou azul. Para BIC mini ou BIC normal.</p></div>
+      <div><span class="n c-azul">3</span><h3>Paga e a gente avalia</h3><p>O Gabriel avalia a ideia. Se ela for contra as políticas da marca, você recebe o valor de volta.</p></div>
+      <div><span class="n c-azul">4</span><h3>Produção</h3><p>Ideia aprovada, a capa é modelada e impressa em ABS. Depois é só esperar o envio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO (Wix Forms com campo de upload) -->
+<section>
+  <div class="wrap">
+    <div class="cabeca"><div><h2>Sua capa</h2></div></div>
+    <div class="aviso-box">
+      <b>Antes de enviar:</b> não fazemos capas com conteúdo de ódio, violência contra pessoas, marcas registradas de terceiros ou [completar com as políticas da Tabaqu3]. Se a ideia não puder ser feita, devolvemos 100% do valor. Você também pode desistir da compra em até 7 dias após o recebimento (CDC, art. 49).
+    </div>
+    <form class="form" onsubmit="return false">
+      <label>Nome<input type="text" placeholder="Seu nome"></label>
+      <label>WhatsApp<input type="tel" placeholder="(31) 9 0000-0000"></label>
+      <label class="full">E-mail<input type="email" placeholder="seu@email.com"></label>
+      <div class="full"><label>Tamanho</label>
+        <div class="radios" style="margin-top:6px"><label><input type="radio" name="t"> BIC mini</label><label><input type="radio" name="t"> BIC normal</label></div></div>
+      <div class="full"><label>Cor</label>
+        <div class="radios" style="margin-top:6px">
+          <label><input type="radio" name="c"><span class="cor"><i style="background:var(--laranja)"></i>Laranja</span></label>
+          <label><input type="radio" name="c"><span class="cor"><i style="background:var(--lilas)"></i>Lilás</span></label>
+          <label><input type="radio" name="c"><span class="cor"><i style="background:var(--cinza-fil)"></i>Cinza</span></label>
+          <label><input type="radio" name="c"><span class="cor"><i style="background:var(--azul)"></i>Azul</span></label>
+        </div></div>
+      <label class="full">Descreva sua ideia<textarea placeholder="O que você quer na capa? Texto, desenho, estilo, posição..."></textarea></label>
+      <div class="full"><label>Referências</label><div class="upload" style="margin-top:6px">Arraste imagens aqui ou clique para enviar (até 5 arquivos)</div></div>
+      <label class="check full"><input type="checkbox"> Li e concordo com as políticas de personalização e de trocas.</label>
+      <div class="full"><button class="btn azul" type="submit">Enviar e ir para o pagamento: R$ 59,90</button></div>
+    </form>
+  </div>
+</section>
+
+<script>
+// Partes repetidas em todas as páginas do protótipo (no Wix isso é o Cabeçalho, o Rodapé e a Lightbox +18,
+// que você monta uma vez e aparecem no site inteiro).
+(function () {
+  var ativo = document.body.getAttribute('data-pagina') || '';
+
+  // Logo provisória "T3" com pingos. TROCAR pelo t3-logo.svg/png oficial do Gabriel.
+  var T3 = '<svg class="t3" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="8" fill="#111"/>' +
+    '<text x="32" y="43" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="34" fill="#fff">T3</text>' +
+    '<path fill="#fff" d="M17 45h4v6a2 2 0 0 1-4 0Zm22 0h3v9a1.5 1.5 0 0 1-3 0Zm7 0h3v4a1.5 1.5 0 0 1-3 0Z"/></svg>';
+
+  function item(id, cls, href, txt) {
+    return '<li class="' + cls + '"><a href="' + href + '"' + (ativo === id ? ' class="ativo"' : '') + '>' + txt + '</a></li>';
+  }
+
+  var topo =
+    '<div class="aviso"><b>🎃 Halloween:</b> só 50 peças · Leve 2 e ganhe 10% na segunda · Envio para todo o Brasil</div>' +
+    '<header><div class="wrap nav">' +
+      '<a href="index.html" class="logo">' + T3 + '<span>TABAQU3</span></a>' +
+      '<ul class="menu">' +
+        item('hall', 'm-hall', 'index.html#halloween', 'Halloween') +
+        item('loja', '', 'index.html#colecoes', 'Loja') +
+        item('esp', 'm-esp', 'colecoes-especiais.html', 'Coleções Especiais') +
+        item('pers', 'm-pers', 'personalize.html', 'Personalize') +
+        item('parc', 'm-parc', 'parcerias.html', 'Parcerias') +
+        item('sobre', '', 'sobre.html', 'Sobre') +
+      '</ul>' +
+      '<a href="#" class="carrinho">Carrinho <i>0</i></a>' +
+      '<button class="hamb" aria-label="Menu">☰</button>' +
+    '</div></header>';
+
+  var rodape =
+    '<footer><div class="wrap"><div class="foot">' +
+      '<div><a href="index.html" class="logo">' + T3 + '<span>TABAQU3</span></a>' +
+      '<p style="color:var(--cinza);margin-top:14px;max-width:34ch">Capas para isqueiro impressas em 3D, com design original. Feito em Belo Horizonte/MG.</p></div>' +
+      '<div><h4>Loja</h4><ul><li><a href="index.html#halloween">Halloween</a></li><li><a href="colecoes-especiais.html">Coleções Especiais</a></li><li><a href="personalize.html">Personalize</a></li></ul></div>' +
+      '<div><h4>Ajuda</h4><ul><li><a href="index.html#faq">Dúvidas</a></li><li><a href="#">Trocas e devoluções</a></li><li><a href="#">Envio</a></li><li><a href="#">Privacidade</a></li></ul></div>' +
+      '<div><h4>Tabaqu3</h4><ul><li><a href="sobre.html">Sobre</a></li><li><a href="parcerias.html">Parcerias</a></li><li><a href="https://instagram.com/tabaqu3_">Instagram @tabaqu3_</a></li><li><a href="#">WhatsApp</a></li></ul></div>' +
+    '</div><div class="legal"><span>© 2026 Tabaqu3 · tabaqu3.com.br · CNPJ [00.000.000/0000-00] · Belo Horizonte/MG</span><span>Site e produtos destinados a maiores de 18 anos.</span></div></div></footer>' +
+    '<a class="zap" href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>';
+
+  var portao =
+    '<div class="portao" id="portao" role="dialog" aria-modal="true" aria-labelledby="portao-t"><div class="caixa">' + T3 +
+      '<h2 id="portao-t">Você tem 18 anos ou mais?</h2>' +
+      '<p>A Tabaqu3 faz acessórios para isqueiro e conversa com o universo da tabacaria. Este site é só para maiores de 18.</p>' +
+      '<div class="acoes"><button class="btn laranja" id="sim18">Sim, tenho 18+</button><a class="btn ghost" href="https://www.google.com">Não</a></div>' +
+    '</div></div>';
+
+  document.body.insertAdjacentHTML('afterbegin', topo);
+  document.body.insertAdjacentHTML('beforeend', rodape);
+
+  var ok = false;
+  try { ok = sessionStorage.getItem('t3-18') === '1'; } catch (e) {}
+  if (!ok && !/[?&]sem18/.test(location.search)) {
+    document.body.insertAdjacentHTML('beforeend', portao);
+    document.getElementById('sim18').onclick = function () {
+      try { sessionStorage.setItem('t3-18', '1'); } catch (e) {}
+      document.getElementById('portao').hidden = true;
+    };
+  }
+})();
+
+</script>
+</body>
+</html>

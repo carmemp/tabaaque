@@ -1,0 +1,31 @@
+TABAQU3 - pacote do site
+========================
+
+ANTES DE TUDO: EXTRAIA O ZIP (botão direito > "Extrair tudo" no Windows, ou dois cliques no Mac).
+Não abra os arquivos por dentro do zip.
+
+Este pacote tem duas pastas:
+
+1) site/  -> o site pronto (5 páginas: Home, Coleções Especiais, Personalize, Parcerias, Sobre)
+   - Cada página é um arquivo .html completo: as fotos, as cores e o menu já estão DENTRO dele.
+     Pode abrir, mandar ou subir qualquer página sozinha que as imagens aparecem.
+   - Para ver: dois cliques em site/index.html.
+   - Para colocar numa HOSPEDAGEM COMUM (Hostinger, HostGator, Netlify, Vercel, GitHub Pages):
+     envie os 5 arquivos .html para a pasta pública (public_html) e aponte o domínio para ela.
+   - ATENÇÃO: nessa versão a loja é só visual. Carrinho, pagamento, frete, estoque e
+     formulários NÃO funcionam, porque isso depende de uma plataforma de loja.
+
+2) wix/   -> tudo para MONTAR o site dentro do Wix (que tem loja, Pix, cartão e frete de verdade)
+   - GUIA-WIX.md: passo a passo completo
+   - conteudo/textos-do-site.md: todos os textos para copiar e colar
+   - imagens-para-upload/: fotos e grafismos para subir em "Mídia do site" no Wix
+   - embeds/contagem-regressiva.html: contador para colar em "Incorporar HTML"
+   - briefing/: respostas do Gabriel
+
+SOBRE O WIX: o Wix não importa sites em HTML/zip. As páginas são recriadas no Editor do Wix,
+usando a pasta site/ como modelo visual. As fotos entram pelo botão "Fazer upload" da Mídia
+do Wix (use a pasta wix/imagens-para-upload/). O domínio tabaqu3.com.br é conectado em
+Configurações > Domínios.
+
+Pendências antes de publicar: logo T3 oficial, CNPJ/dados do rodapé, número do WhatsApp,
+fotos e preços da collab com o João Morais (lista no fim do GUIA-WIX.md).

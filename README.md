@@ -14,3 +14,4 @@ Lançamento: Coleção Halloween (50 peças, até 31/10).
 - **Briefing do Gabriel:** [briefing/briefing-gabriel.md](briefing/briefing-gabriel.md)
 - **Imagens:** `assets/` (produtos recortados, fotos em JPG, grafismo SVG)
 - **Contador regressivo para o Wix (opcional):** `embeds/contagem-regressiva.html`
+- **Gerar o site publicável + zip** (páginas autocontidas, com as fotos dentro do HTML): `python3 ferramentas/montar-site.py` → `entrega/site/` e `entrega/tabaqu3-site.zip`
